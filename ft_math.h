@@ -168,11 +168,9 @@ int			ft_signbit(double x);
 
 // Other functions:
 double		ft_fabs(register double x);
-double		ldexp(double x, int exp);
-double		frexp(double x, int *exp);
 double		ft_modf(register double x, double *integer);
-double		fma(double x, double y, double z);
-double		erf(double x);
+double		ft_fma(register double x, register double y, register double z);
+double		ft_erf(register double x);
 double		erfc(double x);
 double		lgamma(double x);
 double		tgamma(double x);
