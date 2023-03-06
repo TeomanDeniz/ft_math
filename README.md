@@ -66,10 +66,10 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_nextafter](https://github.com/TeomanDeniz/ft_math/blob/main/ft_nextafter.c)**   | `double` x, `double` y                   | Returns the next representable value of from in the direction of to |
 | **[ft_nexttoward](https://github.com/TeomanDeniz/ft_math/blob/main/ft_nexttoward.c)** | `double` x, `long double` y              | (Same with **ft_nextafter**)                                        |
 
-
-# Floating-point classification functions:
+# Floating-point Classification functions:
 | Function Name                                                                         | Function Parameter(s)                    | Description                                                         |
 | ------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------- |
+| **[ft_fpclassify](https://github.com/TeomanDeniz/ft_math/blob/main/ft_fpclassify.c)** | `double` x                               | Categorizes floating point value `x` into the following categories  |
 | **[ft_isfinite](https://github.com/TeomanDeniz/ft_math/blob/main/ft_isfinite.c)**     | `double` x                               | Check if number is not infinity                                     |
 | **[ft_isnormal](https://github.com/TeomanDeniz/ft_math/blob/main/ft_isnormal.c)**     | `double` x                               | Check if number is normal to in use                                 |
 | **[ft_isinf](https://github.com/TeomanDeniz/ft_math/blob/main/ft_isinf.c)**           | `double` x                               | Check if float number is inf number (Will also return -1 if "-inf") |
@@ -81,7 +81,6 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | ------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------- |
 | **[ft_fabs](https://github.com/TeomanDeniz/ft_math/blob/main/ft_fabs.c)**             | `double` x                               | Get the absolute value of a `x`                                     |
 | **[ft_modf](https://github.com/TeomanDeniz/ft_math/blob/main/ft_modf.c)**             | `double` x, `double` \*integer           | Splits fraction an integer in float number (Returns fraction)       |
-
 
 # Constants:
 | Define Name                                                                                         | Value                                                                                            |
@@ -112,6 +111,15 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[LDBL_MAX](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L83)**                      | `1.18973149535723176502E+4932L`                                                                  |
 | **[LDBL_MIN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L86)**                      | `3.36210314311209350626E-4932L`                                                                  |
 | **[LDBL_EPSILON](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L89)**                  | `1.08420217248550443401E-19L`                                                                    |
+
+# Environments for **[ft_fpclassify](https://github.com/TeomanDeniz/ft_math/blob/main/ft_fpclassify.c)** function:
+| Define Name                                                                                         | Value                                                                                            |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **[FP_NAN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L93)**                        | `0`                                                                                              |
+| **[FP_INFINITE](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L96)**                   | `1`                                                                                              |
+| **[FP_ZERO](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L99)**                       | `2`                                                                                              |
+| **[FP_SUBNORMAL](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L102)**                 | `3`                                                                                              |
+| **[FP_NORMAL](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L105)**                    | `4`                                                                                              |
 
 # A Few Example(s):
 ```c

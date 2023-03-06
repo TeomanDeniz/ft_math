@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #ifndef FT_MATH_H
-
 # define FT_MATH_H 0.2 // Version
 
 // Constants:
@@ -90,6 +89,23 @@
 #  define LDBL_EPSILON 1.08420217248550443401E-19L
 # endif
 
+// Environments that used in ft_fpclassify function
+# ifndef FP_NAN
+#  define FP_NAN          0
+# endif
+# ifndef FP_INFINITE
+#  define FP_INFINITE     1
+# endif
+# ifndef FP_ZERO
+#  define FP_ZERO         2
+# endif
+# ifndef FP_SUBNORMAL
+#  define FP_SUBNORMAL    3
+# endif
+# ifndef FP_NORMAL
+#  define FP_NORMAL       4
+# endif
+
 // Trigonometric functions:
 double		ft_sin(register double x);
 double		ft_cos(register double x);
@@ -107,7 +123,7 @@ double		ft_asinh(register double x);
 double		ft_acosh(register double x);
 double		ft_atanh(register double x);
 
-// Exponential and logarithmic functions:
+// Exponential and Logarithmic functions:
 double		ft_exp(register double x);
 double		ft_exp2(register double x);
 double		ft_expm1(register double x);
@@ -129,7 +145,7 @@ double		ft_sqrt(register double x);
 double		ft_cbrt(register double x);
 double		ft_hypot(register double p, register double b);
 
-// Rounding and remainder functions:
+// Rounding and Remainder functions:
 double		ft_ceil(register double x);
 double		ft_floor(register double x);
 double		ft_trunc(register double x);
@@ -142,8 +158,8 @@ double		ft_nan(const char *tag_pointer);
 double		ft_nextafter(register double x, register double y);
 double		ft_nexttoward(register double x, register long double y);
 
-// Floating-point classification functions:
-int			fpclassify(double x);
+// Floating-point Classification functions:
+int			ft_fpclassify(register double x);
 int			ft_isfinite(register double x);
 int			ft_isnormal(register double x);
 int			ft_isinf(register double x);
