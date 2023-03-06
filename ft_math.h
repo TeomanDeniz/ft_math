@@ -171,7 +171,7 @@ double		ft_fabs(register double x);
 double		ft_modf(register double x, double *integer);
 double		ft_fma(register double x, register double y, register double z);
 double		ft_erf(register double x);
-double		erfc(double x);
+double		ft_erfc(register double x);
 double		lgamma(double x);
 double		tgamma(double x);
 double		j0(double x);

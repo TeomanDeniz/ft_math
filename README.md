@@ -83,6 +83,7 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_modf](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_modf.c)**                                     | `double` x, `double` \*integer           | Splits fraction an integer in float number (Returns fraction)       |
 | **[ft_fma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_fma.c)**                                       | `double` x, `double` y, `double` z       | `(x * y + z)`                                                       |
 | **[ft_erf](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_erf.c)**                                       | `double` x                               | Computes the error function of the given `x`                        |
+| **[ft_erfc](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_erfc.c)**                                     | `double` x                               | Computes the complementary error of `x`                             |
 
 # Constants:
 | Define Name                                                                                                                       | Value                                                                                            |

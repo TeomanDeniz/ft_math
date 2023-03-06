@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:58:04 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/02 18:58:06 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/06 19:32:06 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ double
 		return (x);
 	if (x == y)
 		return (y);
-	if (isinf(x))
+	if (ft_isinf(x))
 		return (ft_copysign(DBL_MAX, x));
 	if (x == 0.0)
 		return (ft_copysign(DBL_MIN, y));
