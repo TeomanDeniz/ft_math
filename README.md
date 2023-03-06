@@ -114,7 +114,7 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[LDBL_MIN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L86)**                                                    | `3.36210314311209350626E-4932L`                                                                  |
 | **[LDBL_EPSILON](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L89)**                                                | `1.08420217248550443401E-19L`                                                                    |
 
-# Environments for **[ft_fpclassify](https://github.com/TeomanDeniz/ft_math/blob/main/ft_fpclassify.c)** function:
+# Environments for **[ft_fpclassify](https://github.com/TeomanDeniz/ft_math/blob/main/Floating-point_Classification/ft_fpclassify.c)** function:
 | Define Name                                                                                                                       | Value                                                                                            |
 | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | **[FP_NAN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L93)**                                                      | `0`                                                                                              |
