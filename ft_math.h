@@ -24,7 +24,7 @@
 #  define M_LOG10E 0.434294481903251827651 // log10(e)
 # endif
 # ifndef M_LN2
-#  define M_LN2 0.693147180559945309417 // ln(2)
+#  define M_LN2 0.69314718055994528623 // ln(2)
 # endif
 # ifndef M_LN10
 #  define M_LN10 2.30258509299404568402 // ln(10)
