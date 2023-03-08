@@ -21,7 +21,7 @@
 #  define M_LOG2E 1.44269504088896340736 // log2(e)
 # endif
 # ifndef M_LOG10E
-#  define M_LOG10E 0.434294481903251827651 // log10(e)
+#  define M_LOG10E 0.43429448190325182765 // log10(e)
 # endif
 # ifndef M_LN2
 #  define M_LN2 0.69314718055994528623 // ln(2)
@@ -48,7 +48,7 @@
 #  define M_SQRT2 1.41421356237309504880 // sqrt(2)
 # endif
 # ifndef M_SQRT1_2
-#  define M_SQRT1_2 0.707106781186547524401 // 1 / sqrt(2)
+#  define M_SQRT1_2 0.70710678118654752440 // 1 / sqrt(2)
 # endif
 # ifndef M_2_SQRTPI
 #  define M_2_SQRTPI 1.12837916709551257390 // 2 / sqrt(PI)
