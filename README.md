@@ -101,7 +101,7 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[M_1_PI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L42)**                                                      | `0.31830988618379067153` (Aka: `1 / M_PI`)                                                       |
 | **[M_2_PI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L45)**                                                      | `0.63661977236758134307` (Aka: `2 / M_PI`)                                                       |
 | **[M_SQRT2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L48)**                                                     | `1.41421356237309504880` (Aka: `sqrt(2)`)                                                        |
-| **[M_SQRT1_2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L51)**                                                   | `0.707106781186547524401` (Aka: `1 / sqrt(2)`)                                                   |
+| **[M_SQRT1_2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L51)**                                                   | `0.70710678118654752440` (Aka: `1 / sqrt(2)`)                                                    |
 | **[M_2_SQRTPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L54)**                                                  | `1.12837916709551257390` (Aka: `2 / sqrt(pi)`)                                                   |
 
 # <float.h> Constants:
