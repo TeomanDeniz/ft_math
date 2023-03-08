@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:35:52 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/08 02:49:38 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/08 19:39:38 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static inline double
 	epsilon = -1;
 	while (++epsilon, *x >= 2.0)
 		*x /= 2.0;
-	return (epsilon * 0.69314718055994528623);
+	return (epsilon * M_LN2);
 }
 
 static inline double
