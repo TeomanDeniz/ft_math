@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ldexp.c                                         :+:      :+:    :+:   */
+/*   ft_lgamma.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/02 13:29:41 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/08 02:59:42 by hdeniz           ###   ########.fr       */
+/*   Created: 2023/03/07 23:59:08 by hdeniz            #+#    #+#             */
+/*   Updated: 2023/03/08 03:00:09 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../ft_math.h"
 
 double
-	ft_ldexp(register double x, register int exponent)
+	ft_lgamma(register double x)
 {
-	if (ft_isinf(x) || ft_isnan(x) || x == 0.0 || exponent == 0)
+	if (ft_isnan(x))
 		return (x);
-	if (exponent == (signed)0X80000000 || exponent == 0X7FFFFFFF)
+	if (ft_isinf(x) || x == 0.0 || (x < 0 && (x - (long long)x == 0)))
+		return (1.0 / 0.0);
+	if (x == 1.0 || x == 2.0)
 		return (0.0);
-	if (exponent + ((x / 2) + 1) >= 1025)
-		return (1.0);
-	return (x * ft_pow(2, exponent));
+	if (x >= 3.0 && (x - (long long)x == 0.0))
+		x += 0.00000000001;
+	return (ft_log(ft_fabs(ft_tgamma(x))));
 }

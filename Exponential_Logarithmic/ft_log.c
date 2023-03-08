@@ -6,37 +6,81 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:35:52 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/01 18:05:38 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/08 02:49:38 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../ft_math.h"
 
-double
-	ft_log(register double x)
+static inline double
+	check_your_six(register double x)
 {
-	register double	result;
-	register double	denominator;
-	register int	counter;
-	double			numerators[2];
-
 	if (x < 0.0)
 		return (0.0 / 0.0);
 	if (x == 0.0)
 		return (-1.0 / 0.0);
-	if (ft_isinf(x) || ft_isnan(x))
-		return (x);
-	result = 0.0;
+	return (x);
+}
+
+static inline double
+	log2_simplifier(double *x)
+{
+	register int	epsilon;
+
+	epsilon = -1;
+	while (++epsilon, *x >= 2.0)
+		*x /= 2.0;
+	return (epsilon * 0.69314718055994528623);
+}
+
+static inline double
+	two_or_bigger(double x, register double result)
+{
+	register double	__log2__;
+	register double	calculator;
+	register double	numerator;
+	register double	denominator;
+	register double	term;
+
+	__log2__ = log2_simplifier(&x);
+	numerator = (x - 1.0) / (x + 1.0);
+	calculator = (numerator) * (numerator);
+	term = numerator;
 	denominator = 1.0;
-	numerators[0] = (x - 1.0) / (x + 1.0);
-	numerators[1] = (numerators[0]) * (numerators[0]);
-	counter = 1;
-	while (ft_fabs(numerators[0] / (2 * counter)) > 1E-15)
+	while (ft_fabs(term) > 1E-15)
 	{
-		result += numerators[0] / denominator;
-		numerators[0] *= numerators[1];
+		result += term;
+		numerator *= calculator;
 		denominator += 2.0;
-		counter += 2;
+		term = numerator / denominator;
+	}
+	return (2.0 * result + __log2__);
+}
+
+double
+	ft_log(register double x)
+{
+	register double	calculator;
+	register double	numerator;
+	register double	denominator;
+	register double	term;
+	register double	result;
+
+	if (x < 0.0 || x == 0.0 || ft_isinf(x) || ft_isnan(x))
+		return (check_your_six(x));
+	result = 0.0;
+	if (x >= 2.0)
+		return (two_or_bigger(x, result));
+	numerator = (x - 1.0) / (x + 1.0);
+	calculator = (numerator) * (numerator);
+	denominator = 1.0;
+	term = numerator;
+	while (ft_fabs(term) > 1E-15)
+	{
+		result += term;
+		numerator *= calculator;
+		denominator += 2.0;
+		term = numerator / denominator;
 	}
 	return (2.0 * result);
 }

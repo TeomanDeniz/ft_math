@@ -6,12 +6,12 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 09:20:11 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/06 09:20:12 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/08 01:34:12 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 double
 	ft_fma(register double x, register double y, register double z)
 {
-	return (x * y + z);
+	return ((x * y) + z);
 }

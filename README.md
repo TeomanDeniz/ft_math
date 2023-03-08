@@ -84,6 +84,8 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_fma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_fma.c)**                                       | `double` x, `double` y, `double` z       | `(x * y + z)`                                                       |
 | **[ft_erf](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_erf.c)**                                       | `double` x                               | Computes the error function of the given `x`                        |
 | **[ft_erfc](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_erfc.c)**                                     | `double` x                               | Computes the complementary error of `x`                             |
+| **[ft_lgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_lgamma.c)**                                 | `double` x                               | Computes the logarithm of the absolute `x` of the gamma function    |
+| **[ft_tgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_tgamma.c)**                                 | `double` x                               | Compute the gamma function of `x`                                   |
 
 # Constants:
 | Define Name                                                                                                                       | Value                                                                                            |
