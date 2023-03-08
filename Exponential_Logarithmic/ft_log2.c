@@ -21,5 +21,5 @@ double
 		return ((-1.0 / 0.0));
 	if (x < 0.0)
 		return ((0.0 / 0.0));
-	return (ft_log(x) / ft_log(2.0));
+	return (ft_log(x) / M_LN2);
 }
