@@ -174,9 +174,9 @@ double		ft_erf(register double x);
 double		ft_erfc(register double x);
 double		ft_lgamma(register double x);
 double		ft_tgamma(register double x);
-double		j0(double x);
-double		j1(double x);
-double		jn(int n, double x);
+double		ft_j0(register double x);
+double		ft_j1(register double x);
+double		ft_jn(register int n, register double x);
 double		y0(double x);
 double		y1(double x);
 double		yn(int n, double x);
@@ -186,5 +186,9 @@ double		sinpi(double x);
 double		cospi(double x);
 double		fmin(double x, double y);
 double		fmax(double x, double y);
+
+// Neural Network functions:
+
+double		ft_sigmoid(register double x);
 
 #endif

@@ -86,6 +86,14 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_erfc](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_erfc.c)**                                     | `double` x                               | Computes the complementary error of `x`                             |
 | **[ft_lgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_lgamma.c)**                                 | `double` x                               | Computes the logarithm of the absolute `x` of the gamma function    |
 | **[ft_tgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_tgamma.c)**                                 | `double` x                               | Compute the gamma function of `x`                                   |
+| **[ft_j0](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_j0.c)**                                         | `double` x                               | Compute the Bessel function of the first kind of order zero (j0)    |
+| **[ft_j1](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_j1.c)**                                         | `double` x                               | Compute the Bessel function of the first kind of order one  (j1)    |
+| **[ft_jn](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_jn.c)**                                         | `int` n, `double` x                      | Compute the Bessel function of the first kind of order `n`  (jn)    |
+
+# Neural Network functions:
+| Function Name                                                                                                       | Function Parameter(s)                    | Description                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------- |
+| **[ft_sigmoid](https://github.com/TeomanDeniz/ft_math/blob/main/Neural_Network/ft_sigmoid.c)**                      | `double` x                               | Performs the role of an activation function in machine learning     |
 
 # Constants:
 | Define Name                                                                                                                       | Value                                                                                            |
