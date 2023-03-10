@@ -6,15 +6,25 @@
 #    By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 23:15:03 by hdeniz            #+#    #+#              #
-#    Updated: 2023/02/12 15:07:49 by hdeniz           ###   ########.fr        #
+#    Updated: 2023/03/10 13:44:49 by hdeniz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	ft_math.a
-MAIN		=	MAIN.c
 CC			=	gcc
-FLAGS		=	-Wall -Wextra -Werror
+# [COMPILER]
+
+NAME		=	ft_math.a
+# [COMPILED LIBRARY FILE'S NAME (STATIC LINK LIBRARY)]
+
 SRC			=	$(shell find . -type f ! -name "$(MAIN)" -name "*.c")
+# [FILES TO COMPILE]
+
+MAIN		=	MAIN.c
+# [MAIN PRODUCT TO COMPILE]
+
+FLAGS		=	-Wall -Wextra -Werror
+# [COMPILER FLAGS]
+
 OBJ			=	$(SRC:.c=.o)
 N_FILES		:=	0
 FILES_N		:=	0
@@ -92,6 +102,7 @@ files_n_calculator:
 	$(eval FILES_N := 0)
 	$(eval N_FILES := $(shell echo $(SRC) | wc -w | sed "s/ //g" | bc))
 
+r: fclean all
 re: fclean all
 
-.PHONY: all a clean clear c fclean fclear fc re norminette norm n
+.PHONY: all a clean clear c fclean fclear fc re r norminette norm n

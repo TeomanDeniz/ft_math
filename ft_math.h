@@ -53,6 +53,9 @@
 # ifndef M_2_SQRTPI
 #  define M_2_SQRTPI 1.12837916709551257390 // 2 / sqrt(PI)
 # endif
+# ifndef M_INVSQRTPI
+#  define M_INVSQRTPI 5.64189583547756279280E-01 // invsqrt(PI)
+# endif
 
 // <float.h> Constants:
 
@@ -144,6 +147,7 @@ double		ft_pow10(register double x);
 double		ft_sqrt(register double x);
 double		ft_cbrt(register double x);
 double		ft_hypot(register double p, register double b);
+double		ft_invsqrt(register double x);
 
 // Rounding and Remainder functions:
 double		ft_ceil(register double x);
