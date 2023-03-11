@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_invsqrt.c                                       :+:      :+:    :+:   */
+/*   ft_sincos.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/10 20:11:16 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/12 01:03:36 by hdeniz           ###   ########.fr       */
+/*   Created: 2023/03/12 00:24:21 by hdeniz            #+#    #+#             */
+/*   Updated: 2023/03/12 00:24:23 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../ft_math.h"
 
-double
-	ft_invsqrt(register double x)
+void
+	ft_sincos(register double x, double *sine, double *cosine)
 {
-	double		demon;
-	long long	wtf;
-
-	if (ft_isinf(x) || ft_isnan(x))
-		return (x);
-	if (x == 0.0)
-		return (-(0.0 / 0.0));
-	demon = x;
-	wtf = *(long long *)&demon;
-	wtf = 0X5FE6EB50C7B537A9 - (wtf >> 1);
-	demon = *(double *)&wtf;
-	return (demon * (1.5 - 0.5 * x * demon * demon));
+	*sine = ft_sin(x);
+	*cosine = ft_cos(x);
 }

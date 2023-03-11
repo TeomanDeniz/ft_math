@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/02/26 18:17:46 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/12 00:07:21 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,17 @@
 # ifndef M_SQRT1_2
 #  define M_SQRT1_2 0.70710678118654752440 // 1 / sqrt(2)
 # endif
+# ifndef M_SQRTPI
+#  define M_SQRTPI 1.77245385090551588191 // sqrt(PI)
+# endif
 # ifndef M_2_SQRTPI
 #  define M_2_SQRTPI 1.12837916709551257390 // 2 / sqrt(PI)
 # endif
 # ifndef M_INVSQRTPI
-#  define M_INVSQRTPI 5.64189583547756279280E-01 // invsqrt(PI)
+#  define M_INVSQRTPI 0.56418958354775627928 // invsqrt(PI)
+# endif
+# ifndef M_TPI
+#  define M_TPI 0.63661977236758138243 // 2 / PI
 # endif
 
 // <float.h> Constants:
@@ -170,6 +176,14 @@ int			ft_isinf(register double x);
 int			ft_isnan(register double x);
 int			ft_signbit(double x);
 
+// Bessel functions:
+double		ft_j0(register double x);
+double		ft_j1(register double x);
+double		ft_jn(register int n, register double x);
+double		ft_y0(register double x);
+double		ft_y1(register double x);
+double		ft_yn(register int n, register double x);
+
 // Other functions:
 double		ft_fabs(register double x);
 double		ft_modf(register double x, double *integer);
@@ -178,12 +192,7 @@ double		ft_erf(register double x);
 double		ft_erfc(register double x);
 double		ft_lgamma(register double x);
 double		ft_tgamma(register double x);
-double		ft_j0(register double x);
-double		ft_j1(register double x);
-double		ft_jn(register int n, register double x);
-double		y0(double x);
-double		y1(double x);
-double		yn(int n, double x);
+void		ft_sincos(register double x, double *sine, double *cosine);
 double		scalbn(double x, int n);
 double		scalbln(double x, long int n);
 double		sinpi(double x);
