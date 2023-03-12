@@ -13,6 +13,13 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_acos](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_acos.c)**                             | `double` x                                     | Returns the arc cosine in radians. (1 ≥ x ≥ -1) [Aka: cos⁻¹(x)]     |
 | **[ft_atan](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_atan.c)**                             | `double` x                                     | Returns the arc tangent of `x`                                      |
 | **[ft_atan2](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_atan2.c)**                           | `double` x, `double` y                         | Calculates the angle in radians for the quadrant                    |
+| **[ft_csc](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_csc.c)**                               | `double` x                                     | Returns the cosecant of `x`                                         |
+| **[ft_sec](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_sec.c)**                               | `double` x                                     | Returns the secant of `x`                                           |
+| **[ft_cot](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_cot.c)**                               | `double` x                                     | Returns the cotangent of `x`                                        |
+| **[ft_sincos](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_sincos.c)**                                 | `double` x, `double *` sine, `double *` cosine | Split `x` to given variables as sine and cosine                     |
+| **[ft_sinpi](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_sinpi.c)**                                   | `double` x                                     | sin(`x` * M_PI)                                                     |
+| **[ft_cospi](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_cospi.c)**                                   | `double` x                                     | cos(`x` * M_PI)                                                     |
+| **[ft_tanpi](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_tabpi.c)**                                   | `double` x                                     | tan(`x` * M_PI)                                                     |
 
 # Hyperbolic functions:
 | Function Name                                                                                                       | Function Parameter(s)                          | Description                                                         |
@@ -40,6 +47,7 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_logb](https://github.com/TeomanDeniz/ft_math/blob/main/Exponential_Logarithmic/ft_logb.c)**                   | `double` x                                     | Extracts the unbiased radix-independent exponent from the `x`       |
 | **[ft_ilogb](https://github.com/TeomanDeniz/ft_math/blob/main/Exponential_Logarithmic/ft_ilogb.c)**                 | `double` x                                     | Extracts the value of the unbiased exponent from the  `x` as `int`  |
 | **[ft_scalbn](https://github.com/TeomanDeniz/ft_math/blob/main/Exponential_Logarithmic/ft_scalbn.c)**               | `double` x, `int` exponent                     | Returns `x` multiplied by `2` raised to the power of `exponent`     |
+| **[ft_scalbln](https://github.com/TeomanDeniz/ft_math/blob/main/Exponential_Logarithmic/ft_scalbln.c)**             | `double` x, `long int` exponent                | Returns `x` multiplied by `2` raised to the power of `exponent`     |
 
 # Power functions:
 | Function Name                                                                                                       | Function Parameter(s)                          | Description                                                         |
@@ -97,7 +105,6 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_erfc](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_erfc.c)**                                     | `double` x                                     | Computes the complementary error of `x`                             |
 | **[ft_lgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_lgamma.c)**                                 | `double` x                                     | Computes the logarithm of the absolute `x` of the gamma function    |
 | **[ft_tgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_tgamma.c)**                                 | `double` x                                     | Compute the gamma function of `x`                                   |
-| **[ft_sincos](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_sincos.c)**                                 | `double` x, `double *` sine, `double *` cosine | Split `x` to given variables as sine and cosine                     |
 
 # Neural Network functions:
 | Function Name                                                                                                       | Function Parameter(s)                          | Description                                                         |

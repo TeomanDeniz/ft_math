@@ -123,6 +123,13 @@ double		ft_asin(register double x);
 double		ft_acos(register double x);
 double		ft_atan(register double x);
 double		ft_atan2(register double y, register double x);
+void		ft_sincos(register double x, double *sine, double *cosine);
+double		ft_csc(register x);
+double		ft_sec(register x);
+double		ft_cot(register x);
+double		ft_sinpi(register double x);
+double		ft_cospi(register double x);
+double		ft_tanpi(register double x);
 
 // Hyperbolic functions:
 double		ft_sinh(register double x);
@@ -146,6 +153,7 @@ double		ft_log1p(register double x);
 double		ft_logb(register double x);
 int			ft_ilogb(register double x);
 double		ft_scalbn(register double x, register int exponent);
+double		ft_scalbln(register double x, register long int exponent);
 
 // Power functions:
 double		ft_pow(register double base, register double power);
@@ -192,11 +200,6 @@ double		ft_erf(register double x);
 double		ft_erfc(register double x);
 double		ft_lgamma(register double x);
 double		ft_tgamma(register double x);
-void		ft_sincos(register double x, double *sine, double *cosine);
-double		scalbn(double x, int n);
-double		scalbln(double x, long int n);
-double		sinpi(double x);
-double		cospi(double x);
 double		fmin(double x, double y);
 double		fmax(double x, double y);
 

@@ -19,8 +19,7 @@ static inline double
 		return (1.0);
 	if (ft_isinf(x))
 		return (0.0);
-	if (ft_isnan(x))
-		return (x);
+	return (x);
 }
 
 static inline double
