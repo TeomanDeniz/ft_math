@@ -48,7 +48,7 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_pow10](https://github.com/TeomanDeniz/ft_math/blob/main/Power/ft_pow10.c)**                                   | `double` x                                     | Calculate the exponent of `10` by `x`                               |
 | **[ft_sqrt](https://github.com/TeomanDeniz/ft_math/blob/main/Power/ft_sqrt.c)**                                     | `double` x                                     | Square root calculation of `x`                                      |
 | **[ft_cbrt](https://github.com/TeomanDeniz/ft_math/blob/main/Power/ft_cbrt.c)**                                     | `double` x                                     | Computes the cube root of `x`                                       |
-| **[ft_hypot](https://github.com/TeomanDeniz/ft_math/blob/main/Power/ft_hypot.c)**                                   | `double` p, `double` b                         | Find hypotenuse of two sides. h = √(p2+b2)                          |
+| **[ft_hypot](https://github.com/TeomanDeniz/ft_math/blob/main/Power/ft_hypot.c)**                                   | `double` p, `double` b                         | Find hypotenuse of two sides. h = √(p²+b²)                          |
 | **[ft_invsqrt](https://github.com/TeomanDeniz/ft_math/blob/main/Power/ft_invsqrt.c)**                               | `double` x                                     | Fast inverse square root                                            |
 
 # Rounding and Remainder functions:
