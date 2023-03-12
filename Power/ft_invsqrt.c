@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 20:11:16 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/12 01:03:36 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/12 10:61:30 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,7 @@ double
 	demon = *(double *)&wtf;
 	return (demon * (1.5 - 0.5 * x * demon * demon));
 }
+
+/*
+ * From: https://en.wikipedia.org/wiki/Fast_inverse_square_root
+ */
