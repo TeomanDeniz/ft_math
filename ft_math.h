@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/12 00:07:21 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/12 21:23:21 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,8 +200,8 @@ double		ft_erf(register double x);
 double		ft_erfc(register double x);
 double		ft_lgamma(register double x);
 double		ft_tgamma(register double x);
-double		fmin(double x, double y);
-double		fmax(double x, double y);
+double		ft_fmin(register double x, register double y);
+double		ft_fmax(register double x, register double y);
 
 // Neural Network functions:
 

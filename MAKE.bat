@@ -6,7 +6,7 @@
 ::   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        ..
 ::                                                +#+#+#+#+#+   +#+           ..
 ::   Created: 2022/12/09 23:15:03 by hdeniz            #+#    #+#             ..
-::   Updated: 2023/03/12 01:05:49 by hdeniz           ###   ########.fr       ..
+::   Updated: 2023/03/12 21:21:49 by hdeniz           ###   ########.fr       ..
 ::                                                                            ..
 :: ************************************************************************** ..
 
@@ -59,10 +59,17 @@ GOTO :EOF
 		)
 	)
 	CALL :PROGRESS_BAR !PROGRESS! !SRC_FILE_NUM! "!NAME!"
-	IF EXIST "*.o" IF NOT EXIST "!NAME!" AR -rcs !NAME! *.o||GOTO :ERROR
-	ECHO.
-	ECHO.
-	ECHO  !NAME! Done*
+	WHERE "AR">NUL 2>NUL
+	IF NOT !ERRORLEVEL! NEQ 0 (
+		IF EXIST "*.o" IF NOT EXIST "!NAME!" AR -rcs !NAME! *.o||GOTO :ERROR
+		ECHO.
+		ECHO.
+		ECHO  INFO: !NAME! DONE!
+	) ELSE (
+		ECHO.
+		ECHO.
+		ECHO  WARNING: "AR" IS NOT FOUND ON YOUR COMPUTER TO LIBRARY OBJECT FILES!
+	)
 	SET PROGRESS=0
 GOTO :EOF
 
@@ -70,9 +77,16 @@ GOTO :EOF
 :MAIN
 	FOR %%# IN ("!MAIN!") DO SET "MAIN_NAME=%%~N#"
 	ECHO.
-	!CC! !CFLAGS! !MAIN! !NAME! -o !MAIN_NAME!.exe||GOTO :ERROR
+	WHERE "AR">NUL 2>NUL
+	IF !ERRORLEVEL! NEQ 0 (
+		ECHO  INFO: THIS WILL CAUSE SOME PROBLEMS ON YOUR PROGRAM.
+		ECHO        WE'RE GOING TO COMPILE "!MAIN!" MANUALLY WITHOUT "!NAME!"
+		!CC! !CFLAGS! !MAIN! "*.o" -o !MAIN_NAME!.exe||GOTO :ERROR
+	) ELSE (
+		!CC! !CFLAGS! !MAIN! !NAME! -o !MAIN_NAME!.exe||GOTO :ERROR
+	)
 	ECHO.
-	ECHO  !MAIN_NAME!.exe Done*
+	ECHO  INFO: !MAIN_NAME!.exe DONE!
 	ECHO.
 GOTO :EOF
 
@@ -98,10 +112,10 @@ GOTO :EOF
 GOTO :EOF
 
 :Makefile
-	WHERE !CC!>NUL 2>NUL
-	IF %ERRORLEVEL% NEQ 0 GOTO :ERROR_COMPILER !CC!
 	SET "MAKEFILE_PATH=%~0"
 	SET "#=UPDATE_LINE"
+	WHERE !CC!>NUL 2>NUL
+	IF %ERRORLEVEL% NEQ 0 GOTO :ERROR_COMPILER
 	FOR /F "DELIMS=#" %%# IN ('"PROMPT #$H# &ECHO ON &FOR %%# IN (1) DO REM"') DO (
 		SET "%#%=%%#"
 		SET "%#%=!%#%:~0,1!"
@@ -156,7 +170,7 @@ GOTO :FORCE_OUT 1
 
 :ERROR_COMPILER
 	ECHO.
-	ECHO  ERROR: %~1 IS NOT FOUND ON YOUR COMPUTER TO COMPILE THE FILES!
+	ECHO  ERROR: "!CC!" IS NOT FOUND ON YOUR COMPUTER TO COMPILE THE FILES!
 	CALL :PAUSE
 GOTO :FORCE_OUT 2
 

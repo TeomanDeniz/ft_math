@@ -16,10 +16,10 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_csc](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_csc.c)**                               | `double` x                                     | Returns the cosecant of `x`                                         |
 | **[ft_sec](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_sec.c)**                               | `double` x                                     | Returns the secant of `x`                                           |
 | **[ft_cot](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_cot.c)**                               | `double` x                                     | Returns the cotangent of `x`                                        |
-| **[ft_sincos](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_sincos.c)**                                 | `double` x, `double *` sine, `double *` cosine | Split `x` to given variables as sine and cosine                     |
-| **[ft_sinpi](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_sinpi.c)**                                   | `double` x                                     | sin(`x` * M_PI)                                                     |
-| **[ft_cospi](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_cospi.c)**                                   | `double` x                                     | cos(`x` * M_PI)                                                     |
-| **[ft_tanpi](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_tabpi.c)**                                   | `double` x                                     | tan(`x` * M_PI)                                                     |
+| **[ft_sincos](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_sincos.c)**                         | `double` x, `double *` sine, `double *` cosine | Split `x` to given variables as sine and cosine                     |
+| **[ft_sinpi](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_sinpi.c)**                           | `double` x                                     | sin(`x` * M_PI)                                                     |
+| **[ft_cospi](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_cospi.c)**                           | `double` x                                     | cos(`x` * M_PI)                                                     |
+| **[ft_tanpi](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_tabpi.c)**                           | `double` x                                     | tan(`x` * M_PI)                                                     |
 
 # Hyperbolic functions:
 | Function Name                                                                                                       | Function Parameter(s)                          | Description                                                         |
@@ -105,11 +105,14 @@ Includes `C23`, `C11` and `C99` functions, can compilable and work all versions 
 | **[ft_erfc](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_erfc.c)**                                     | `double` x                                     | Computes the complementary error of `x`                             |
 | **[ft_lgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_lgamma.c)**                                 | `double` x                                     | Computes the logarithm of the absolute `x` of the gamma function    |
 | **[ft_tgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_tgamma.c)**                                 | `double` x                                     | Compute the gamma function of `x`                                   |
+| **[ft_fmin](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_fmin.c)**                                     | `double` x                                     | If (`x` < `y`) return `x`, else return `y`                          |
+| **[ft_fmax](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_fmax.c)**                                     | `double` x                                     | If (`x` > `y`) return `x`, else return `y`                          |
 
 # Neural Network functions:
 | Function Name                                                                                                       | Function Parameter(s)                          | Description                                                         |
 | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------- |
 | **[ft_sigmoid](https://github.com/TeomanDeniz/ft_math/blob/main/Neural_Network/ft_sigmoid.c)**                      | `double` x                                     | Performs the role of an activation function in machine learning     |
+| **[ft_swish](https://github.com/TeomanDeniz/ft_math/blob/main/Neural_Network/ft_swish.c)**                          | `double` x                                     | Allows for a more flexible range of `x`                             |
 
 # Constants:
 | Define Name                                                                                                                             | Value                                                                                            |

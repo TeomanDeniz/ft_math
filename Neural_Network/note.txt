@@ -1,0 +1,8 @@
+Functions to add here
+
+ReLU (Rectified Linear Unit)
+Leaky ReLU
+ELU (Exponential Linear Unit)
+Softmax
+PReLU (Parametric Rectified Linear Unit)
+Mish

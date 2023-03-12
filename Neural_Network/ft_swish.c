@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sigmoid.c                                       :+:      :+:    :+:   */
+/*   ft_swish.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/09 21:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/09 21:17:46 by hdeniz           ###   ########.fr       */
+/*   Created: 2023/03/12 21:34:17 by hdeniz            #+#    #+#             */
+/*   Updated: 2023/03/12 21:34:19 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,15 @@
 static inline double
 	check_your_six(register double x)
 {
-	if (ft_isnan(x))
+	if (ft_isnan(x) || ft_isinf(x) == 1 || x == 0.0)
 		return (x);
-	if (ft_isinf(x) == -1)
-		return (0.0);
-	return (1.0);
+	return (-(0.0 / 0.0));
 }
 
 double
-	ft_sigmoid(register double x)
+	ft_swish(register double x)
 {
-	if (ft_isnan(x) || ft_isinf(x))
+	if (ft_isinf(x) || ft_isnan(x) || x == 0.0)
 		return (check_your_six(x));
-	return (1 / (1 + ft_pow(M_E, -x)));
+	return (x * ft_sigmoid(x));
 }
-
-/*
- * Original creator:
- *
- * https://github.com/nayayayay/sigmoid-function
- */
