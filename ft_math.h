@@ -204,7 +204,15 @@ double		ft_fmin(register double x, register double y);
 double		ft_fmax(register double x, register double y);
 
 // Neural Network functions:
-
 double		ft_sigmoid(register double x);
+double		ft_swish(register double x);
+double		ft_relu(register double x);
+double		ft_leakyrelu(register double x, register double alpha);
+double		ft_elu(register double x, register double alpha);
+double		ft_prelu(register double x, register double alpha);
+double		ft_mish(register double x);
+void		ft_softmax(double *x, register int size);
+double		ft_softmin(double *x, register int size, register double alpha);
+double		ft_softmedian(double *x, register int size, register double alpha);
 
 #endif
