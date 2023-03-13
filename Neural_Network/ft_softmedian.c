@@ -16,7 +16,7 @@ double
 	softmedian(double *x, register int size, register double alpha)
 {
 	register int	epsilon;
-	register double result;
+	register double	result;
 	register double	sum;
 
 	epsilon = -1;

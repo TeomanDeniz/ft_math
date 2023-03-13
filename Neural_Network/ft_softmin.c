@@ -25,7 +25,7 @@ double
 	while (++epsilon, epsilon < size)
 		sum += ft_exp(-alpha * x[epsilon]);
 	epsilon = -1;
-    while (++epsilon, epsilon < size)
+	while (++epsilon, epsilon < size)
 		result += x[epsilon] * ft_exp(-alpha * x[epsilon]) / sum;
 	return (result);
 }
