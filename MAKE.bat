@@ -6,7 +6,7 @@
 ::   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        ..
 ::                                                +#+#+#+#+#+   +#+           ..
 ::   Created: 2022/12/09 23:15:03 by hdeniz            #+#    #+#             ..
-::   Updated: 2023/03/12 21:51:49 by hdeniz           ###   ########.fr       ..
+::   Updated: 2023/03/13 15:50:49 by hdeniz           ###   ########.fr       ..
 ::                                                                            ..
 :: ************************************************************************** ..
 
@@ -19,7 +19,7 @@ SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 ::PHONY CLEAN CLEAR C
 ::PHONY FCLEAN FCLEAR FC
 
-SET "CC=TCC"
+SET "CC=GCC"
 REM [COMPILER]
 
 SET "NAME=ft_math.a"
