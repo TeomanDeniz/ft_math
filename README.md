@@ -3,6 +3,34 @@
 
 Includes `C23`, `C11` and `C99` functions, can compilable and work all versions + compilers.
 
+# Setup:
+
+> **Windows:**
+>
+> You can double click `MAKE.bat` file and directly install it.
+> 
+> Or in console, write `make` to compile the stup.
+
+> **Linux, macOS:**
+> 
+> In console, write `make` to compile the setup.
+
+## PHONYS
+
+Here's the arguments `MAKE.bat` and `Makefile` using:
+
+> `fc`, `fclean`, `fclear` -> Clear both object and created products.
+
+> `c`, `clean`, `clear` -> Clear only object files
+
+> `re` -> Remake everything
+
+Then, in console: you need to include your binary compiler library (.a file) via parameter while compiling your file.
+
+```
+GCC main.c ft_math.a
+```
+
 # Trigonometric functions:
 | Function Name                                                                                                       | Function Parameter(s)                          | Description                                                             |
 | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------- |
