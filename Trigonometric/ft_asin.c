@@ -13,7 +13,7 @@
 #include	"../ft_math.h"
 
 double
-	my_asin(register double x)
+	ft_asin(register double x)
 {
 	if (ft_isnan(x))
 		return (x);
