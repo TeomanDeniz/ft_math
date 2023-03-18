@@ -12,8 +12,12 @@
 
 #include	"../ft_math.h"
 
+/* Thanks to "https://github.com/sleepy-monax" for noticing me about
+ * functon names are not same with in order.
+ */
+
 double
-	my_asin(register double x)
+	ft_asin(register double x)
 {
 	if (ft_isnan(x))
 		return (x);
