@@ -15,7 +15,9 @@
 static inline double
 	exp_inf_or_nan(register double x)
 {
-	if ((ft_isinf(x) == -1) || (x == 0))
+	if (x == 0.0)
+		return (1.0);
+	if (ft_isinf(x) == -1)
 		return (0.0);
 	if (ft_isinf(x) == 1)
 		return (x);
@@ -31,10 +33,10 @@ double
 	register double			term;
 	register unsigned int	counter;
 
-	if (ft_isinf(x) || ft_isnan(x) || x == 0)
+	if (ft_isinf(x) || ft_isnan(x) || x == 0.0)
 		return (exp_inf_or_nan(x));
-	if (x < 0)
-		return (1 / ft_exp(-x));
+	if (x < 0.0)
+		return (1.0 / ft_exp(-x));
 	counter = 0;
 	result = 1.0;
 	term = 1.0;
