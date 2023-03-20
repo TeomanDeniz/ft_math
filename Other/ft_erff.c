@@ -6,14 +6,14 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 09:50:19 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:38:21 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 03:23:21 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../ft_math.h"
 
 float
-	ft_erf(register float x)
+	ft_erff(register float x)
 {
 	register float	t;
 	register float	y;

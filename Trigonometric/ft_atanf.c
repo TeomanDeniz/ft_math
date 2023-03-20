@@ -6,14 +6,14 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:59:43 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 18:08:49 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 03:25:49 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../ft_math.h"
 
 float
-	ft_atan(register float x)
+	ft_atanf(register float x)
 {
 	register float	y;
 
