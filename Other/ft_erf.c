@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 09:50:19 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/08 01:36:21 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/19 21:39:21 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ double
 	register double	t;
 	register double	y;
 
-	if (x == 0 || ft_isnan(x))
+	if (x == 0.0 || ft_isnan(x))
 		return (x);
 	if (ft_isinf(x) == 1)
 		return (1.0);

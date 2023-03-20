@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:35:15 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/02/27 12:48:16 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/19 20:38:16 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 double
 	ft_sinh(register double x)
 {
-	return ((ft_exp(x) - ft_exp(-x)) / 2);
+	return ((ft_exp(x) - ft_exp(-x)) / 2.0);
 }

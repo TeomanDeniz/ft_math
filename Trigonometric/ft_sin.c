@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 11:38:23 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/02/16 18:21:53 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/19 17:35:28 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ double
 {
 	register double			result;
 	register double			term;
-	register unsigned int	i;
+	register unsigned int	epsilon;
 
 	if (ft_isinf(x))
 		return (0.0 / 0.0);
-	x = ft_fmod(x, 2 * M_PI);
-	i = 3;
+	x = ft_fmod(x, 2.0 * M_PI);
+	epsilon = 3;
 	term = x;
 	result = x;
 	while (ft_fabs(term) > 1E-15)
 	{
-		term = -term * x * x / (i * (i - 1));
+		term = -term * x * x / (epsilon * (epsilon - 1.0));
 		result += term;
-		i += 2;
+		epsilon += 2;
 	}
 	return (result);
 }

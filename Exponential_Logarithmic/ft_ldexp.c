@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 13:29:41 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/08 02:59:42 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/19 21:05:42 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ double
 		return (0.0);
 	if (exponent + ((x / 2) + 1) >= 1025)
 		return (1.0);
-	return (x * ft_pow(2, exponent));
+	return (x * ft_pow(2.0, exponent));
 }

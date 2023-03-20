@@ -115,6 +115,56 @@
 #  define FP_NORMAL       4
 # endif
 
+// Constants (Float):
+# ifndef M_E_F
+#  define M_E_F 2.71828182845904523536F // Euler's Number
+# endif
+# ifndef M_LOG2E_F
+#  define M_LOG2E_F 1.44269504088896340736F // log2(e)
+# endif
+# ifndef M_LOG10E_F
+#  define M_LOG10E_F 0.43429448190325182765F // log10(e)
+# endif
+# ifndef M_LN2_F
+#  define M_LN2_F 0.69314718055994528623F // ln(2)
+# endif
+# ifndef M_LN10_F
+#  define M_LN10_F 2.30258509299404568402F // ln(10)
+# endif
+# ifndef M_PI_F
+#  define M_PI_F 3.14159265358979323846F // PI
+# endif
+# ifndef M_PI_2_F
+#  define M_PI_2_F 1.57079632679489661923F // PI / 2
+# endif
+# ifndef M_PI_4_F
+#  define M_PI_4_F 0.78539816339744830961F // PI / 4
+# endif
+# ifndef M_1_PI_F
+#  define M_1_PI_F 0.31830988618379067153F // 1 / PI
+# endif
+# ifndef M_2_PI_F
+#  define M_2_PI_F 0.63661977236758134307F // 2 / PI
+# endif
+# ifndef M_SQRT2_F
+#  define M_SQRT2_F 1.41421356237309504880F // sqrt(2)
+# endif
+# ifndef M_SQRT1_2_F
+#  define M_SQRT1_2_F 0.70710678118654752440F // 1 / sqrt(2)
+# endif
+# ifndef M_SQRTPI_F
+#  define M_SQRTPI_F 1.77245385090551588191F // sqrt(PI)
+# endif
+# ifndef M_2_SQRTPI_F
+#  define M_2_SQRTPI_F 1.12837916709551257390F // 2 / sqrt(PI)
+# endif
+# ifndef M_INVSQRTPI_F
+#  define M_INVSQRTPI_F 0.56418958354775627928F // invsqrt(PI)
+# endif
+# ifndef M_TPI_F
+#  define M_TPI_F 0.63661977236758138243F // 2 / PI
+# endif
+
 // Trigonometric functions:
 double		ft_sin(register double x);
 double		ft_cos(register double x);
@@ -130,6 +180,21 @@ double		ft_cot(register double x);
 double		ft_sinpi(register double x);
 double		ft_cospi(register double x);
 double		ft_tanpi(register double x);
+// [Float]
+float		ft_sinf(register float x);
+float		ft_cosf(register float x);
+float		ft_tanf(register float x);
+float		ft_asinf(register float x);
+float		ft_acosf(register float x);
+float		ft_atanf(register float x);
+float		ft_atan2f(register float y, register float x);
+void		ft_sincosf(register float x, float *sine, float *cosine);
+float		ft_cscf(register float x);
+float		ft_secf(register float x);
+float		ft_cotf(register float x);
+float		ft_sinpif(register float x);
+float		ft_cospif(register float x);
+float		ft_tanpif(register float x);
 
 // Hyperbolic functions:
 double		ft_sinh(register double x);
@@ -138,6 +203,13 @@ double		ft_tanh(register double x);
 double		ft_asinh(register double x);
 double		ft_acosh(register double x);
 double		ft_atanh(register double x);
+// [Float]
+float		ft_sinhf(register float x);
+float		ft_coshf(register float x);
+float		ft_tanhf(register float x);
+float		ft_asinhf(register float x);
+float		ft_acoshf(register float x);
+float		ft_atanhf(register float x);
 
 // Exponential and Logarithmic functions:
 double		ft_exp(register double x);
@@ -154,6 +226,21 @@ double		ft_logb(register double x);
 int			ft_ilogb(register double x);
 double		ft_scalbn(register double x, register int exponent);
 double		ft_scalbln(register double x, register long int exponent);
+// [Float]
+float		ft_expf(register float x);
+float		ft_exp2f(register float x);
+float		ft_expm1f(register float x);
+float		ft_exp10f(register float x);
+float		ft_frexpf(register float x, int *exponent);
+float		ft_ldexpf(register float x, register int exponent);
+float		ft_logf(register float x);
+float		ft_log2f(register float x);
+float		ft_log10f(register float x);
+float		ft_log1pf(register float x);
+float		ft_logbf(register float x);
+int			ft_ilogbf(register float x);
+float		ft_scalbnf(register float x, register int exponent);
+float		ft_scalblnf(register float x, register long int exponent);
 
 // Power functions:
 double		ft_pow(register double base, register double power);
@@ -162,6 +249,13 @@ double		ft_sqrt(register double x);
 double		ft_cbrt(register double x);
 double		ft_hypot(register double p, register double b);
 double		ft_invsqrt(register double x);
+// [Float]
+float		ft_powf(register float base, register float power);
+float		ft_pow10f(register float x);
+float		ft_sqrtf(register float x);
+float		ft_cbrtf(register float x);
+float		ft_hypotf(register float p, register float b);
+float		ft_invsqrtf(register float x);
 
 // Rounding and Remainder functions:
 double		ft_ceil(register double x);
@@ -175,6 +269,28 @@ double		ft_copysign(register double x, register double y);
 double		ft_nan(const char *tag_pointer);
 double		ft_nextafter(register double x, register double y);
 double		ft_nexttoward(register double x, register long double y);
+long int	ft_lround(register double x);
+double		ft_rint(register double x);
+long int	ft_lrint(register double x);
+double		ft_nearbyint(register double x);
+double		ft_fdim(register double x, register double y);
+// [Float]
+float		ft_ceilf(register float x);
+float		ft_floorf(register float x);
+float		ft_truncf(register float x);
+float		ft_roundf(register float x);
+float		ft_fmodf(register float x, register float y);
+float		ft_remainderf(register float x, register float y);
+float		ft_remquof(register float x, register float y, int *quotient);
+float		ft_copysignf(register float x, register float y);
+float		ft_nanf(const char *tag_pointer);
+float		ft_nextafterf(register float x, register float y);
+float		ft_nexttowardf(register float x, register long double y);
+long int	ft_lroundf(register float x);
+float		ft_rintf(register float x);
+long int	ft_lrintf(register float x);
+float		ft_nearbyintf(register float x);
+float		ft_fdimf(register float x, register float y);
 
 // Floating-point Classification functions:
 int			ft_fpclassify(register double x);
@@ -183,6 +299,8 @@ int			ft_isnormal(register double x);
 int			ft_isinf(register double x);
 int			ft_isnan(register double x);
 int			ft_signbit(double x);
+// [Float]
+int			ft_fpclassifyf(register float x);
 
 // Bessel functions:
 double		ft_j0(register double x);
@@ -191,6 +309,13 @@ double		ft_jn(register int n, register double x);
 double		ft_y0(register double x);
 double		ft_y1(register double x);
 double		ft_yn(register int n, register double x);
+// [Float]
+float		ft_j0f(register float x);
+float		ft_j1f(register float x);
+float		ft_jnf(register int n, register float x);
+float		ft_y0f(register float x);
+float		ft_y1f(register float x);
+float		ft_ynf(register int n, register float x);
 
 // Other functions:
 double		ft_fabs(register double x);
@@ -202,6 +327,16 @@ double		ft_lgamma(register double x);
 double		ft_tgamma(register double x);
 double		ft_fmin(register double x, register double y);
 double		ft_fmax(register double x, register double y);
+// [Float]
+float		ft_fabsf(register float x);
+float		ft_modff(register float x, float *integer);
+float		ft_fmaf(register float x, register float y, register float z);
+float		ft_erff(register float x);
+float		ft_erfcf(register float x);
+float		ft_lgammaf(register float x);
+float		ft_tgammaf(register float x);
+float		ft_fminf(register float x, register float y);
+float		ft_fmaxf(register float x, register float y);
 
 // Neural Network functions:
 double		ft_sigmoid(register double x);
@@ -214,5 +349,16 @@ double		ft_mish(register double x);
 void		ft_softmax(double *x, register int size);
 double		ft_softmin(double *x, register int size, register double alpha);
 double		ft_softmedian(double *x, register int size, register double alpha);
+// [Float]
+float		ft_eluf(register float x, register float alpha);
+float		ft_leakyreluf(register float x, register float alpha);
+float		ft_mishf(register float x);
+float		ft_preluf(register float x, register float alpha);
+float		ft_reluf(register float x);
+float		ft_sigmoidf(register float x);
+void		ft_softmaxf(float *x, register int size);
+float		ft_softmedianf(float *x, register int size, register float alpha);
+float		ft_softminf(float *x, register int size, register float alpha);
+float		ft_swishf(register float x);
 
 #endif

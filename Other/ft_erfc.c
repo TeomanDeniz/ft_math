@@ -19,7 +19,7 @@ double
 	register double	x_abs;
 	register double	y;
 
-	if (x == 0)
+	if (x == 0.0)
 		return (1.0);
 	if (ft_isnan(x))
 		return (x);

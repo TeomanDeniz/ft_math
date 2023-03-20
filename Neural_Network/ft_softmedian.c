@@ -6,14 +6,14 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 15:41:41 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/13 15:41:44 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 01:24:44 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../ft_math.h"
 
 double
-	softmedian(double *x, register int size, register double alpha)
+	ft_softmedian(double *x, register int size, register double alpha)
 {
 	register int	epsilon;
 	register double	result;

@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 15:22:43 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/13 15:22:44 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 00:57:44 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 double
 	ft_mish(register double x)
 {
-	return (x * ft_tanh(ft_log(1 + ft_exp(x))));
+	return (x * ft_tanh(ft_log(1.0 + ft_exp(x))));
 }

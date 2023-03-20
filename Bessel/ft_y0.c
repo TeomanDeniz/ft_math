@@ -6,23 +6,13 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:15:22 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/12 10:45:02 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 02:03:02 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../ft_math.h"
 
-static inline double
-	check_your_six(register double x)
-{
-	if (x == 0.0)
-		return (-(1.0 / 0.0));
-	if (ft_isnan(x))
-		return (x);
-	if (ft_isinf(x) == 1)
-		return (0.0);
-	return (-(0.0 / 0.0));
-}
+static inline double	check_your_six(register double x);
 
 double
 	ft_y0(register double x)
@@ -50,4 +40,16 @@ double
 	return (0.7978845608028654 / ft_sqrt(ft_fabs(x)) * (ans1 * \
 		ft_sin((ft_fabs(x) - 0.785398164)) + (8.0 / ft_fabs(x)) * ans2 * \
 		ft_cos((ft_fabs(x) - 0.785398164))));
+}
+
+static inline double
+	check_your_six(register double x)
+{
+	if (x == 0.0)
+		return (-(1.0 / 0.0));
+	if (ft_isnan(x))
+		return (x);
+	if (ft_isinf(x) == 1)
+		return (0.0);
+	return (-(0.0 / 0.0));
 }
