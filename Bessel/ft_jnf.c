@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 22:20:11 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 02:07:12 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 03:28:12 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ float
 	counter = -1;
 	numerator = 1.0F;
 	denominator = 1.0F;
-	while (++counter, ft_fabsf(numerator / denominator) > 1E-15F)
+	while (++counter, ft_fabsf(numerator / denominator) > 1E-15)
 	{
 		numerator = ft_powf(-1.0F, counter) * \
 			ft_powf(x / 2.0F, n + 2.0F * counter);

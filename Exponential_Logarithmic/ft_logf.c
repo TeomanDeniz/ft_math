@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:35:52 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 20:53:38 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 03:36:38 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ float
 	calculator = (numerator) * (numerator);
 	denominator = 1.0F;
 	term = numerator;
-	while (ft_fabsf(term) > 1E-15F)
+	while (ft_fabsf(term) > 1E-15)
 	{
 		result += term;
 		numerator *= calculator;
@@ -69,7 +69,7 @@ static inline float
 	calculator = (numerator) * (numerator);
 	term = numerator;
 	denominator = 1.0F;
-	while (ft_fabs(term) > 1E-15F)
+	while (ft_fabs(term) > 1E-15)
 	{
 		result += term;
 		numerator *= calculator;

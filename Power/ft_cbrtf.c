@@ -6,7 +6,7 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 12:28:15 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:16:16 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 03:32:16 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ float
 		return (x);
 	result = 1.0F;
 	prev_result = 0.0F;
-	while (ft_fabsf(result - prev_result) > 1E-15F)
+	while (ft_fabsf(result - prev_result) > 1E-15)
 	{
 		prev_result = result;
 		result = (2.0F * result + x / (result * result)) / 3.0F;

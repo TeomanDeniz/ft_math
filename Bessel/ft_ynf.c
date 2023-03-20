@@ -6,14 +6,14 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 11:32:11 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 02:15:06 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 03:39:06 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"../ft_math.h"
 
+static inline float	check_your_six(register int n, float x, int sign);
 static inline int		n_abs(register int n);
-static inline float		check_your_six(register int n, float x, int sign);
 
 float
 	ft_ynf(register int n, register float x)
