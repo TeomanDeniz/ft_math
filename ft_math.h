@@ -6,12 +6,12 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/12 21:23:21 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/03/20 03:45:21 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MATH_H
-# define FT_MATH_H 0.2 // Version
+# define FT_MATH_H 0.3 // Version
 
 // Constants:
 # ifndef M_E
