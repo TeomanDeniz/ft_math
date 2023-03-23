@@ -6,7 +6,7 @@
 #    By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 23:15:03 by hdeniz            #+#    #+#              #
-#    Updated: 2023/03/19 20:22:49 by hdeniz           ###   ########.fr        #
+#    Updated: 2023/03/23 15:36:49 by hdeniz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC			=	gcc
 NAME		=	ft_math.a
 # [COMPILED LIBRARY FILE'S NAME (STATIC LINK LIBRARY)]
 
-SRC			=	$(eval SRC := $$(filter-out $(MAIN),$$(wildcard **/*.c)))$(SRC)
+SRC			=	$(eval SRC := $$(filter-out $$(MAIN),$$(wildcard **/*.c)))$(SRC)
 # [FILES TO COMPILE]
 
 MAIN		=	MAIN.c
