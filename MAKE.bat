@@ -6,7 +6,7 @@
 ::   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        ..
 ::                                                +#+#+#+#+#+   +#+           ..
 ::   Created: 2022/12/09 23:15:03 by hdeniz            #+#    #+#             ..
-::   Updated: 2023/03/13 15:50:49 by hdeniz           ###   ########.fr       ..
+::   Updated: 2023/03/23 03:11:49 by hdeniz           ###   ########.fr       ..
 ::                                                                            ..
 :: ************************************************************************** ..
 
@@ -99,8 +99,8 @@ GOTO :ALL
 :CLEAR
 :CLEAN
 	ECHO.
-	FOR /R %%# IN (!SRC!) DO (
-		IF EXIST "%%~N#.o" DEL %%~N#.o & ECHO  %%~N#.o Deleted.
+	FOR /R %%# IN (*.o) DO (
+		IF EXIST "%%~DP#%%~N#.o" DEL "%%~DP#%%~N#.o" & ECHO  %%~DP#%%~N#.o Deleted.
 	)
 GOTO :EOF
 
@@ -108,7 +108,11 @@ GOTO :EOF
 :FCLEAR
 :FCLEAN
 	CALL :CLEAN
-	IF EXIST "!NAME!" DEL "!NAME!" & ECHO  !NAME! Deleted.
+	ECHO.
+	FOR /R %%# IN (*.a) DO (
+		IF EXIST "%%~DP#%%~N#.a" DEL "%%~DP#%%~N#.a" & ECHO  %%~DP#%%~N#.a Deleted.
+	)
+	IF EXIST "!MAIN_NAME!.exe" DEL "!MAIN_NAME!.exe" & ECHO  !MAIN_NAME!.exe Deleted.
 GOTO :EOF
 
 :Makefile
