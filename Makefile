@@ -16,7 +16,7 @@ CC			=	gcc
 NAME		=	ft_math.a
 # [COMPILED LIBRARY FILE'S NAME (STATIC LINK LIBRARY)]
 
-SRC			=	$(eval SRC := $$(filter-out $$(MAIN),$$(wildcard **/*.c)))$(SRC)
+SRC			=	$(eval SRC := $$(shell find . -type f ! -name $$(MAIN) -name "*.c"))$(SRC)
 # [FILES TO COMPILE]
 
 MAIN		=	MAIN.c
