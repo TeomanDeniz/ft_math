@@ -6,14 +6,14 @@
 /*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 03:45:21 by hdeniz           ###   ########.fr       */
+/*   Updated: 2023/08/13 22:20:21 by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MATH_H
-# define FT_MATH_H 0.3 // Version
+# define FT_MATH_H 20230813L
 
-// Constants:
+/* Constants */
 # ifndef M_E
 #  define M_E 2.71828182845904523536 // Euler's Number
 # endif
@@ -62,10 +62,11 @@
 # ifndef M_TPI
 #  define M_TPI 0.63661977236758138243 // 2 / PI
 # endif
+/* Constants */
 
-// <float.h> Constants:
+/* <float.h> Constants */
 
-// Limits of float type
+/* Limits of float type */
 # ifndef FLT_MAX
 #  define FLT_MAX 3.40282347E+38F
 # endif
@@ -75,8 +76,9 @@
 # ifndef FLT_EPSILON
 #  define FLT_EPSILON 1.19209290E-7F
 # endif
+/* Limits of float type */
 
-// Limits of double type
+/* Limits of double type */
 # ifndef DBL_MAX
 #  define DBL_MAX 1.7976931348623158E+308
 # endif
@@ -86,8 +88,9 @@
 # ifndef DBL_EPSILON
 #  define DBL_EPSILON 2.2204460492503131E-16
 # endif
+/* Limits of double type */
 
-// Limits of long double type
+/* Limits of long double type */
 # ifndef LDBL_MAX
 #  define LDBL_MAX 1.18973149535723176502E+4932L
 # endif
@@ -97,8 +100,9 @@
 # ifndef LDBL_EPSILON
 #  define LDBL_EPSILON 1.08420217248550443401E-19L
 # endif
+/* Limits of long double type */
 
-// Environments that used in ft_fpclassify function
+/* Environments that used in ft_fpclassify function */
 # ifndef FP_NAN
 #  define FP_NAN          0
 # endif
@@ -114,8 +118,9 @@
 # ifndef FP_NORMAL
 #  define FP_NORMAL       4
 # endif
+/* Environments that used in ft_fpclassify function */
 
-// Constants (Float):
+/* Constants (Float) */
 # ifndef M_E_F
 #  define M_E_F 2.71828182845904523536F // Euler's Number
 # endif
@@ -164,8 +169,9 @@
 # ifndef M_TPI_F
 #  define M_TPI_F 0.63661977236758138243F // 2 / PI
 # endif
+/* Constants (Float) */
 
-// Trigonometric functions:
+/* Trigonometric functions */
 double		ft_sin(register double x);
 double		ft_cos(register double x);
 double		ft_tan(register double x);
@@ -180,7 +186,7 @@ double		ft_cot(register double x);
 double		ft_sinpi(register double x);
 double		ft_cospi(register double x);
 double		ft_tanpi(register double x);
-// [Float]
+/* [Float] */
 float		ft_sinf(register float x);
 float		ft_cosf(register float x);
 float		ft_tanf(register float x);
@@ -195,23 +201,27 @@ float		ft_cotf(register float x);
 float		ft_sinpif(register float x);
 float		ft_cospif(register float x);
 float		ft_tanpif(register float x);
+/* [Float] */
+/* Trigonometric functions */
 
-// Hyperbolic functions:
+/* Hyperbolic functions */
 double		ft_sinh(register double x);
 double		ft_cosh(register double x);
 double		ft_tanh(register double x);
 double		ft_asinh(register double x);
 double		ft_acosh(register double x);
 double		ft_atanh(register double x);
-// [Float]
+/* [Float] */
 float		ft_sinhf(register float x);
 float		ft_coshf(register float x);
 float		ft_tanhf(register float x);
 float		ft_asinhf(register float x);
 float		ft_acoshf(register float x);
 float		ft_atanhf(register float x);
+/* [Float] */
+/* Hyperbolic functions */
 
-// Exponential and Logarithmic functions:
+/* Exponential and Logarithmic functions */
 double		ft_exp(register double x);
 double		ft_exp2(register double x);
 double		ft_expm1(register double x);
@@ -226,7 +236,7 @@ double		ft_logb(register double x);
 int			ft_ilogb(register double x);
 double		ft_scalbn(register double x, register int exponent);
 double		ft_scalbln(register double x, register long int exponent);
-// [Float]
+/* [Float] */
 float		ft_expf(register float x);
 float		ft_exp2f(register float x);
 float		ft_expm1f(register float x);
@@ -241,23 +251,27 @@ float		ft_logbf(register float x);
 int			ft_ilogbf(register float x);
 float		ft_scalbnf(register float x, register int exponent);
 float		ft_scalblnf(register float x, register long int exponent);
+/* [Float] */
+/* Exponential and Logarithmic functions */
 
-// Power functions:
+/* Power functions */
 double		ft_pow(register double base, register double power);
 double		ft_pow10(register double x);
 double		ft_sqrt(register double x);
 double		ft_cbrt(register double x);
 double		ft_hypot(register double p, register double b);
 double		ft_invsqrt(register double x);
-// [Float]
+/* [Float] */
 float		ft_powf(register float base, register float power);
 float		ft_pow10f(register float x);
 float		ft_sqrtf(register float x);
 float		ft_cbrtf(register float x);
 float		ft_hypotf(register float p, register float b);
 float		ft_invsqrtf(register float x);
+/* [Float] */
+/* Power functions */
 
-// Rounding and Remainder functions:
+/* Rounding and Remainder functions */
 double		ft_ceil(register double x);
 double		ft_floor(register double x);
 double		ft_trunc(register double x);
@@ -274,7 +288,7 @@ double		ft_rint(register double x);
 long int	ft_lrint(register double x);
 double		ft_nearbyint(register double x);
 double		ft_fdim(register double x, register double y);
-// [Float]
+/* [Float] */
 float		ft_ceilf(register float x);
 float		ft_floorf(register float x);
 float		ft_truncf(register float x);
@@ -291,33 +305,40 @@ float		ft_rintf(register float x);
 long int	ft_lrintf(register float x);
 float		ft_nearbyintf(register float x);
 float		ft_fdimf(register float x, register float y);
+/* [Float] */
+/* Rounding and Remainder functions */
 
-// Floating-point Classification functions:
+/* Floating-point Classification functions */
 int			ft_fpclassify(register double x);
 int			ft_isfinite(register double x);
 int			ft_isnormal(register double x);
 int			ft_isinf(register double x);
 int			ft_isnan(register double x);
 int			ft_signbit(double x);
-// [Float]
+double		ft_significand(register double x);
+/* [Float] */
 int			ft_fpclassifyf(register float x);
+float		ft_significandf(register float x);
+/* Floating-point Classification functions */
 
-// Bessel functions:
+/* Bessel functions */
 double		ft_j0(register double x);
 double		ft_j1(register double x);
 double		ft_jn(register int n, register double x);
 double		ft_y0(register double x);
 double		ft_y1(register double x);
 double		ft_yn(register int n, register double x);
-// [Float]
+/* [Float] */
 float		ft_j0f(register float x);
 float		ft_j1f(register float x);
 float		ft_jnf(register int n, register float x);
 float		ft_y0f(register float x);
 float		ft_y1f(register float x);
 float		ft_ynf(register int n, register float x);
+/* [Float] */
+/* Bessel functions */
 
-// Other functions:
+/* Other functions */
 double		ft_fabs(register double x);
 double		ft_modf(register double x, double *integer);
 double		ft_fma(register double x, register double y, register double z);
@@ -327,7 +348,7 @@ double		ft_lgamma(register double x);
 double		ft_tgamma(register double x);
 double		ft_fmin(register double x, register double y);
 double		ft_fmax(register double x, register double y);
-// [Float]
+/* [Float] */
 float		ft_fabsf(register float x);
 float		ft_modff(register float x, float *integer);
 float		ft_fmaf(register float x, register float y, register float z);
@@ -337,8 +358,10 @@ float		ft_lgammaf(register float x);
 float		ft_tgammaf(register float x);
 float		ft_fminf(register float x, register float y);
 float		ft_fmaxf(register float x, register float y);
+/* [Float] */
+/* Other functions */
 
-// Neural Network functions:
+/* Neural Network functions */
 double		ft_sigmoid(register double x);
 double		ft_swish(register double x);
 double		ft_relu(register double x);
@@ -349,7 +372,7 @@ double		ft_mish(register double x);
 void		ft_softmax(double *x, register int size);
 double		ft_softmin(double *x, register int size, register double alpha);
 double		ft_softmedian(double *x, register int size, register double alpha);
-// [Float]
+/* [Float] */
 float		ft_eluf(register float x, register float alpha);
 float		ft_leakyreluf(register float x, register float alpha);
 float		ft_mishf(register float x);
@@ -360,5 +383,7 @@ void		ft_softmaxf(float *x, register int size);
 float		ft_softmedianf(float *x, register int size, register float alpha);
 float		ft_softminf(float *x, register int size, register float alpha);
 float		ft_swishf(register float x);
+/* [Float] */
+/* Neural Network functions */
 
-#endif
+#endif /* FT_MATH_H */
