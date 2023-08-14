@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* INCLUDES */
 #include "../ft_math.h" /*
 #    int ft_isinf(double);
 #    int ft_isnan(double);
 */
+/* INCLUDES */
 
 union u_float_bits {
 	float	value;

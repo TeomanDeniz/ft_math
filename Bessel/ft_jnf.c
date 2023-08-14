@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline float	check_your_six(register float x);
 static inline float	factorial(register int n);
+/* PROTOTYPES */
 
 float
 	ft_jnf(register int n, register float x)

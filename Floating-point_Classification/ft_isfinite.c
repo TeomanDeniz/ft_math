@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
 int
 	ft_isfinite(register double x)

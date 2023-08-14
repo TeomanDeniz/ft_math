@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
 void
 	ft_softmaxf(float *x, register int size)

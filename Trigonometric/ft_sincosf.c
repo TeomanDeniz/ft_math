@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
 void
 	ft_sincosf(register float x, float *sine, float *cosine)

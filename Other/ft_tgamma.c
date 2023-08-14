@@ -10,9 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline void	settings_filler(double *setting);
+/* PROTOTYPES */
 
 double
 	ft_tgamma(register double x)

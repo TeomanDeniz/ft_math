@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline float	check_your_six(register int n, float x, int sign);
 static inline int		n_abs(register int n);
+/* PROTOTYPES */
 
 float
 	ft_ynf(register int n, register float x)

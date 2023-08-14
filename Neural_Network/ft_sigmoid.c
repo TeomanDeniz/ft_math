@@ -10,9 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline double	check_your_six(register double x);
+/* PROTOTYPES */
 
 double
 	ft_sigmoid(register double x)

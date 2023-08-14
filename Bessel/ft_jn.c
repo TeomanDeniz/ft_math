@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline double	check_your_six(register double x);
 static inline double	factorial(register int n);
+/* PROTOTYPES */
 
 double
 	ft_jn(register int n, register double x)

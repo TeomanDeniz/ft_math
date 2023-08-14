@@ -10,11 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline double	check_your_six(register double x);
 static inline double	log2_simplifier(double *x);
 static inline double	two_or_bigger(double x, register double result);
+/* PROTOTYPES */
 
 double
 	ft_log(register double x)

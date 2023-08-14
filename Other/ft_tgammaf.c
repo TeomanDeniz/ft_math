@@ -10,9 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline void	settings_filler(float *setting);
+/* PROTOTYPES */
 
 float
 	ft_tgammaf(register float x)

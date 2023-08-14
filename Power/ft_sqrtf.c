@@ -10,9 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline float	sqrt_checker(register float x);
+/* PROTOTYPES */
 
 float
 	ft_sqrtf(register float x)

@@ -10,15 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
-static inline double
-	sqrt_checker(register double x)
-{
-	if (x < 0.0)
-		return (0.0 / 0.0);
-	return (x);
-}
+/* PROTOTYPES */
+static inline double	sqrt_checker(register double x);
+/* PROTOTYPES */
 
 double
 	ft_sqrt(register double x)
@@ -36,4 +34,12 @@ double
 		guess = (guess + x / guess) / 2.0;
 	}
 	return (guess);
+}
+
+static inline double
+	sqrt_checker(register double x)
+{
+	if (x < 0.0)
+		return (0.0 / 0.0);
+	return (x);
 }

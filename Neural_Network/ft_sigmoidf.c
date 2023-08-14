@@ -10,9 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline float	check_your_six(register float x);
+/* PROTOTYPES */
 
 float
 	ft_sigmoidf(register float x)

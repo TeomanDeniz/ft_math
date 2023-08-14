@@ -140,6 +140,7 @@ GCC main.c ft_math.a
 | **[ft_tgamma](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_tgamma.c)** **[ft_tgammaf](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_tgammaf.c)** | `double` x                         | Compute the gamma function of `x`                                |
 | **[ft_fmin](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_fmin.c)** **[ft_fminf](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_fminf.c)**         | `double` x                         | If (`x` < `y`) return `x`, else return `y`                       |
 | **[ft_fmax](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_fmax.c)** **[ft_fmaxf](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_fmaxf.c)**         | `double` x                         | If (`x` > `y`) return `x`, else return `y`                       |
+| **[ft_lerp](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_lerp.c)** **[ft_lerpf](https://github.com/TeomanDeniz/ft_math/blob/main/Other/ft_lerpf.c)**         | `double` x, `double` y, `double` f | Linear interpolation.                                            |
 
 # Neural Network functions:
 | Function Name                                                                                                                                                                                               | Function Parameter(s)                    | Description                                                             |
@@ -156,7 +157,7 @@ GCC main.c ft_math.a
 | **[ft_softmedian](https://github.com/TeomanDeniz/ft_math/blob/main/Neural_Network/ft_softmedian.c)** **[ft_softmedianf](https://github.com/TeomanDeniz/ft_math/blob/main/Neural_Network/ft_softmedianf.c)** | `double *` x, `int` size, `double` alpha | Defined as the weighted average of the elements in a vector `x`         |
 
 # Constants:
-| Define Name                                                                                                                                                            | Value                                                                                            |
+| Define Name                                                                                                                                                            | Value                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | **[M_E](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L17)** **[M_E_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L119)**                 | `2.71828182845904523536` (Aka: `Euler's number`) |
 | **[M_LOG2E](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L20)** **[M_LOG2E_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L122)**         | `1.44269504088896340736` (Aka: `log2(e)`)        |

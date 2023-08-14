@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline double	check_ur_6(register double base, register double power);
 static inline double	minus_base(register double base, register double power);
+/* PROTOTYPES */
 
 double
 	ft_pow(register double base, register double power)

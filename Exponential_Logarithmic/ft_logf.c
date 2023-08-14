@@ -10,11 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../ft_math.h"
+/* INCLUDES */
+#include "../ft_math.h"
+/* INCLUDES */
 
+/* PROTOTYPES */
 static inline float	check_your_six(register float x);
 static inline float	log2_simplifier(float *x);
 static inline float	two_or_bigger(float x, register float result);
+/* PROTOTYPES */
 
 float
 	ft_logf(register float x)

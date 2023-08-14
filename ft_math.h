@@ -348,6 +348,7 @@ double		ft_lgamma(register double x);
 double		ft_tgamma(register double x);
 double		ft_fmin(register double x, register double y);
 double		ft_fmax(register double x, register double y);
+double		ft_lerp(register double x, register double y, register double f);
 /* [Float] */
 float		ft_fabsf(register float x);
 float		ft_modff(register float x, float *integer);
@@ -358,6 +359,7 @@ float		ft_lgammaf(register float x);
 float		ft_tgammaf(register float x);
 float		ft_fminf(register float x, register float y);
 float		ft_fmaxf(register float x, register float y);
+float		ft_lerpf(register float x, register float y, register float f);
 /* [Float] */
 /* Other functions */
 
