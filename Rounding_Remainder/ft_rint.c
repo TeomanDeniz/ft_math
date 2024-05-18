@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rint.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 00:19:30 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 00:22:33 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_floor(double);
+# double ft_ceil(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_rint(register double x)
@@ -21,5 +24,5 @@ double
 		return (ft_floor(x + 0.5));
 	if (x < 0.0)
 		return (ft_ceil(x - 0.5));
-	return (x);
+	return (0.0);
 }

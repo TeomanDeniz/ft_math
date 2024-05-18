@@ -3,22 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nearbyint.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 00:35:30 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 00:36:23 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_floor(double);
+# double ft_ceil(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_nearbyint(register double x)
 {
-	register double	floor_x;
-	register double	ceil_x;
+	double	floor_x;
+	double	ceil_x;
 
 	floor_x = ft_floor(x);
 	ceil_x = ft_ceil(x);

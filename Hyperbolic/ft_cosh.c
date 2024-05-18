@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cosh.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 13:26:15 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/02/27 13:26:16 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_exp(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_cosh(register double x)

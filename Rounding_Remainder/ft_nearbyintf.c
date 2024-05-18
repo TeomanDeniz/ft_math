@@ -3,22 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nearbyintf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 00:35:30 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 00:37:23 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#  float ft_floorf(float);
+#  float ft_ceilf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_nearbyintf(register float x)
 {
-	register float	floorf_x;
-	register float	ceilf_x;
+	float	floorf_x;
+	float	ceilf_x;
 
 	floorf_x = ft_floorf(x);
 	ceilf_x = ft_ceilf(x);

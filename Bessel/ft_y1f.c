@@ -3,20 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_y1f.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 23:27:03 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 02:12:22 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_sqrtf(float);
+#  float ft_sinf(float);
+#  float ft_cosf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline float	check_your_six(register float x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ float	check_your_six(float x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 float
 	ft_y1f(register float x)
@@ -24,6 +30,7 @@ float
 	register float	y;
 	register float	ans1;
 	register float	ans2;
+	float			result;
 
 	if (ft_isnan(x) || ft_isinf(x) || x == 0.0F)
 		return (check_your_six(x));
@@ -32,18 +39,19 @@ float
 		(-0.2073370639E-5F + y * (0.2093887211E-6F))));
 	ans2 = -0.1562499995E-1F + y * (0.1430488765E-3F + y * \
 		(-0.6911147651E-5F + y * (0.7621095161E-6F - y * 0.934935152E-7F)));
-	return (ft_sqrtf(0.636619772F / x) * (ans1 * ft_sinf(x - 2.356194491F) + \
-			y * ans2 * ft_cosf(x - 2.356194491F)));
+	result = ft_sqrtf(0.636619772F / x) * (ans1 * ft_sinf(x - 2.356194491F) + \
+			y * ans2 * ft_cosf(x - 2.356194491F));
+	return (result);
 }
 
-static inline float
-	check_your_six(register float x)
+extern __inline__ float
+	check_your_six(float x)
 {
 	if (x == 0.0F)
 		return (-(1.0F / 0.0F));
 	if (ft_isnan(x))
 		return (x);
-	if (ft_isinf(x) == 1)
+	if (ft_isinf(x))
 		return (0.0F);
 	return (-(0.0F / 0.0F));
 }

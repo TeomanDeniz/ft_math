@@ -3,19 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_log10.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:56:29 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/02/23 15:56:56 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_log(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
+
+#define LOG10 2.3025850929940459 // log(10.0)
 
 double
 	ft_log10(register double x)
 {
-	return (ft_log(x) / ft_log(10.0));
+	return (ft_log(x) / LOG10);
 }

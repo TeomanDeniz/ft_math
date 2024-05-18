@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pow10.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 20:49:40 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:36:45 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_pow(double, double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_pow10(register double x)

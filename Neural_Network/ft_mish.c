@@ -3,19 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mish.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 15:22:43 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 00:57:44 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_tanh(double);
+# double ft_log(double);
+# double ft_exp(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
-	ft_mish(register double x)
+	ft_mish(double x)
 {
 	return (x * ft_tanh(ft_log(1.0 + ft_exp(x))));
 }

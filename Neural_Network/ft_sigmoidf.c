@@ -3,20 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sigmoidf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 21:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 01:02:10 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define M_E_F
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_powf(float, float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline float	check_your_six(register float x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ float	check_your_six(float x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 float
 	ft_sigmoidf(register float x)
@@ -26,8 +31,8 @@ float
 	return (1.0F / (1.0F + ft_powf(M_E_F, -x)));
 }
 
-static inline float
-	check_your_six(register float x)
+extern __inline__ float
+	check_your_six(float x)
 {
 	if (ft_isnan(x))
 		return (x);

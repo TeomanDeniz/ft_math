@@ -3,26 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_remquo.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 15:53:17 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/02 15:53:20 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_fmod(double, double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_remquo(register double x, register double y, int *quotient)
 {
-	register double	result;
+	double	result;
 
 	if (ft_isnan(y))
-		return (y);
+	{
+		result = y;
+		return (result);
+	}
 	if (ft_isnan(x))
-		return (x);
+	{
+		result = x;
+		return (result);
+	}
 	if (y == 0.0 || ft_isinf(x))
 		return (0.0 / 0.0);
 	result = ft_fmod(x, y);

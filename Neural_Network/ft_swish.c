@@ -3,31 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swish.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 21:34:17 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 01:23:19 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+# double ft_sigmoid(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline double	check_your_six(register double x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ double	check_your_six(double x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_swish(register double x)
 {
+	double	result;
+
 	if (ft_isinf(x) || ft_isnan(x) || x == 0.0)
 		return (check_your_six(x));
-	return (x * ft_sigmoid(x));
+	result = x * ft_sigmoid(x);
+	return (result);
 }
 
-static inline double
-	check_your_six(register double x)
+extern __inline__ double
+	check_your_six(double x)
 {
 	if (ft_isnan(x) || ft_isinf(x) == 1 || x == 0.0)
 		return (x);

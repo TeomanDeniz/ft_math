@@ -3,25 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrtf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:03:31 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:30:56 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline float	sqrt_checker(register float x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ float	sqrt_checker(float x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 float
 	ft_sqrtf(register float x)
 {
-	register float	guess;
+	float			guess;
 	register float	last_guess;
 
 	if (x <= 0.0F || ft_isnan(x) || ft_isinf(x))
@@ -36,8 +39,8 @@ float
 	return (guess);
 }
 
-static inline float
-	sqrt_checker(register float x)
+extern __inline__ float
+	sqrt_checker(float x)
 {
 	if (x < 0.0F)
 		return (0.0F / 0.0F);

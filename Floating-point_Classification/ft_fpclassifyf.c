@@ -3,16 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fpclassifyf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:51:42 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:58:43 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define FP_NAN
+# define FP_INFINITE
+# define FP_ZERO
+# define FLT_MIN
+# define FP_SUBNORMAL
+# define FP_NORMAL
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_fabsf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 int
 	ft_fpclassifyf(register float x)
@@ -23,7 +33,7 @@ int
 		return (FP_INFINITE);
 	if (x == 0.0F)
 		return (FP_ZERO);
-	if (ft_fabs(x) < (FLT_MIN))
+	if (ft_fabsf(x) < (FLT_MIN))
 		return (FP_SUBNORMAL);
 	return (FP_NORMAL);
 }

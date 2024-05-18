@@ -3,23 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tanhf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 12:26:29 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 20:39:30 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_expf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_tanhf(register float x)
 {
+	float	result;
+
 	if (ft_isnan(x))
-		return (x);
+	{
+		result = x;
+		return (result);
+	}
 	if (ft_isinf(x))
-		return (1.0F * ft_isinf(x));
-	return ((ft_expf(x) - ft_expf(-x)) / (ft_expf(x) + ft_expf(-x)));
+	{
+		result = 1.0F * ft_isinf(x);
+		return (result);
+	}
+	result = (ft_expf(x) - ft_expf(-x)) / (ft_expf(x) + ft_expf(-x));
+	return (result);
 }

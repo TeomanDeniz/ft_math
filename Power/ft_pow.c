@@ -3,21 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 16:38:18 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:23:54 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_exp(double);
+# double ft_log(double);
+# double ft_floor(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline double	check_ur_6(register double base, register double power);
-static inline double	minus_base(register double base, register double power);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ double	check_your_six(double base, double power);
+extern __inline__ double	minus_base(register double base, \
+register double power);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_pow(register double base, register double power)
@@ -29,7 +36,7 @@ double
 	if (ft_isnan(power))
 		return (power);
 	if (ft_isinf(base) || ft_isinf(power))
-		return (check_ur_6(base, power));
+		return (check_your_six(base, power));
 	if (power < 0.0)
 		return (1.0 / ft_pow(base, -power));
 	if (base < 0.0)
@@ -37,20 +44,20 @@ double
 	return (ft_exp(power * ft_log(base)));
 }
 
-static inline double
+extern __inline__ double
 	minus_base(register double base, register double power)
 {
 	if (ft_floor(power) == power)
 	{
-		if ((int)power % 2 == 0)
+		if ((long)power % 2L == 0L)
 			return (ft_pow(-base, power));
 		return (-ft_pow(-base, power));
 	}
 	return (-(0.0 / 0.0));
 }
 
-static inline double
-	check_ur_6(register double base, register double power)
+extern __inline__ double
+	check_your_six(double base, double power)
 {
 	if (ft_isinf(power) == -1)
 		return (0.0);

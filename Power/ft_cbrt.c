@@ -3,25 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cbrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 12:28:15 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:17:16 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+# double ft_fabs(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_cbrt(register double x)
 {
-	register double	result;
 	register double	prev_result;
+	double			result;
 
 	if (x == 0.0 || x == -0.0 || ft_isinf(x) || ft_isnan(x))
-		return (x);
+	{
+		result = x;
+		return (result);
+	}
 	result = 1.0;
 	prev_result = 0.0;
 	while (ft_fabs(result - prev_result) > 1E-15)

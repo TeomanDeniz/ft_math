@@ -3,28 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_erfcf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 19:50:19 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:40:21 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_fabsf(float);
+#  float ft_expf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_erfcf(register float x)
 {
-	register float	result;
+	float			result;
 	register float	x_abs;
 	register float	y;
 
 	if (x == 0.0F)
 		return (1.0F);
 	if (ft_isnan(x))
-		return (x);
+	{
+		result = x;
+		return (result);
+	}
 	if (ft_isinf(x) == 1)
 		return (0.0F);
 	if (ft_isinf(x) == -1)

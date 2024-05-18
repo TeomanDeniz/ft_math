@@ -3,16 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fpclassify.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:51:42 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/06 08:51:43 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define FP_NAN
+# define FP_INFINITE
+# define FP_ZERO
+# define DBL_MIN
+# define FP_SUBNORMAL
+# define FP_NORMAL
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_fabs(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 int
 	ft_fpclassify(register double x)

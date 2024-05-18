@@ -1,3 +1,15 @@
+<!--------------------------------------------------------------------------- !
+ !                                                                            !
+ !                                                        :::      ::::::::   !
+ !   ft_math.h                                          :+:      :+:    :+:   !
+ !                                                    +:+ +:+         +:+     !
+ !   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        !
+ !                                                +#+#+#+#+#+   +#+           !
+ !   Created: 2023/02/26 18:17:45 by hdeniz            #+#    #+#             !
+ !   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       !
+ !                                                                            !
+ ! ---------------------------------------------------------------------------->
+
 # ft_math
 `ft_math.h` is a remake library from original `<math.h>` library.
 
@@ -47,16 +59,16 @@ GCC main.c ft_math.a
 | **[ft_sincos](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_sincos.c)** **[ft_sincosf](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_sincosf.c)** | `double` x, `double *` sine, `double *` cosine | Split `x` to given variables as sine and cosine                 |
 | **[ft_sinpi](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_sinpi.c)**  **[ft_sinpif](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_sinpif.c)**    | `double` x                                     | sin(`x` * M_PI)                                                 |
 | **[ft_cospi](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_cospi.c)**  **[ft_cospif](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_cospif.c)**    | `double` x                                     | cos(`x` * M_PI)                                                 |
-| **[ft_tanpi](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_tabpi.c)**  **[ft_tanpif](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_tabpif.c)**    | `double` x                                     | tan(`x` * M_PI)                                                 |
+| **[ft_tanpi](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_tanpi.c)**  **[ft_tanpif](https://github.com/TeomanDeniz/ft_math/blob/main/Trigonometric/ft_tanpif.c)**    | `double` x                                     | tan(`x` * M_PI)                                                 |
 
 # Hyperbolic functions:
 | Function Name                                                                                                                                                                   | Function Parameter(s) | Description                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------ |
 | **[ft_sinh](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_sinh.c)** **[ft_sinhf](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_sinhf.c)**     | `double` x            | Computes the hyperbolic sine of `x`        |
-| **[ft_cosh](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_sinh.c)** **[ft_coshf](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_sinhf.c)**     | `double` x            | Computes the hyperbolic cosine of `x`      |
+| **[ft_cosh](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_cosh.c)** **[ft_coshf](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_coshf.c)**     | `double` x            | Computes the hyperbolic cosine of `x`      |
 | **[ft_tanh](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_tanh.c)** **[ft_tanhf](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_tanhf.c)**     | `double` x            | Computes the hyperbolic tangent of `x`     |
 | **[ft_asinh](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_asinh.c)** **[ft_asinhf](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_asinhf.c)** | `double` x            | Computes the arc hyperbolic sine of `x`    |
-| **[ft_acosh](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_asinh.c)** **[ft_acoshf](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_asinhf.c)** | `double` x            | Computes the arc hyperbolic cosine of `x`  |
+| **[ft_acosh](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_acosh.c)** **[ft_acoshf](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_acoshf.c)** | `double` x            | Computes the arc hyperbolic cosine of `x`  |
 | **[ft_atanh](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_atanh.c)** **[ft_atanhf](https://github.com/TeomanDeniz/ft_math/blob/main/Hyperbolic/ft_atanhf.c)** | `double` x            | Computes the arc hyperbolic tangent of `x` |
 
 # Exponential and Logarithmic functions:
@@ -160,44 +172,57 @@ GCC main.c ft_math.a
 # Constants:
 | Define Name                                                                                                                                                            | Value                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| **[M_E](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L17)** **[M_E_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L119)**                 | `2.71828182845904523536` (Aka: `Euler's number`) |
-| **[M_LOG2E](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L20)** **[M_LOG2E_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L122)**         | `1.44269504088896340736` (Aka: `log2(e)`)        |
-| **[M_LOG10E](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L23)** **[M_LOG10E_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L125)**       | `0.43429448190325182765` (Aka: `log10(e)`)       |
-| **[M_LN2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L26)** **[M_LN2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L128)**             | `0.69314718055994528623` (Aka: `ln(2)`)          |
-| **[M_LN10](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L29)** **[M_LN10_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L131)**           | `2.30258509299404568402` (Aka: `ln(10)`)         |
-| **[M_PI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L32)** **[M_PI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L134)**               | `3.14159265358979323846` (π)                     |
-| **[M_PI_2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L35)** **[M_PI_2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L137)**           | `1.57079632679489661923` (Aka: `M_PI / 2`)       |
-| **[M_PI_4](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L38)** **[M_PI_4_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L140)**           | `0.78539816339744830961` (Aka: `M_PI / 4`)       |
-| **[M_1_PI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L41)** **[M_1_PI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L143)**           | `0.31830988618379067153` (Aka: `1 / M_PI`)       |
-| **[M_2_PI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L44)** **[M_2_PI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L146)**           | `0.63661977236758134307` (Aka: `2 / M_PI`)       |
-| **[M_SQRT2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L47)** **[M_SQRT2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L149)**         | `1.41421356237309504880` (Aka: `sqrt(2)`)        |
-| **[M_SQRT1_2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L50)** **[M_SQRT1_2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L152)**     | `0.70710678118654752440` (Aka: `1 / sqrt(2)`)    |
-| **[M_SQRTPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L53)** **[M_SQRTPI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L155)**       | `1.77245385090551588191` (Aka: `sqrt(PI)`)       |
-| **[M_2_SQRTPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L56)** **[M_2_SQRTPI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L158)**   | `1.12837916709551257390` (Aka: `2 / sqrt(pi)`)   |
-| **[M_INVSQRTPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L59)** **[M_INVSQRTPI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L161)** | `0.56418958354775627928` (Aka: `invsqrt(pi)`)    |
-| **[M_TPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L62)** **[M_TPI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L164)**             | `0.63661977236758138243` (Aka: `2 / PI`)         |
+| **[M_E](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L17)** **[M_E_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L72)**                  | `2.71828182845904523536` (Aka: `Euler's number`) |
+| **[M_LOG2E](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L20)** **[M_LOG2E_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L75)**          | `1.44269504088896340736` (Aka: `log2(e)`)        |
+| **[M_LOG10E](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L23)** **[M_LOG10E_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L78)**        | `0.43429448190325182765` (Aka: `log10(e)`)       |
+| **[M_LN2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L26)** **[M_LN2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L81)**              | `0.69314718055994528623` (Aka: `ln(2)`)          |
+| **[M_LN10](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L29)** **[M_LN10_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L84)**            | `2.30258509299404568402` (Aka: `ln(10)`)         |
+| **[M_PIX2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L32)** **[M_PIX2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L87)**            | `6.28318530717958647692` (Aka: `M_PI * 2`)       |
+| **[M_PIX2_3](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L35)** **[M_PIX2_3_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L90)**        | `4.71238898038400589261` (Aka: M_PI * 2 / 3)     |
+| **[M_PI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L38)** **[M_PI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L93)**                | `3.14159265358979323846` (π)                     |
+| **[M_PI_2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L41)** **[M_PI_2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L96)**            | `1.57079632679489661923` (Aka: `M_PI / 2`)       |
+| **[M_PI_4](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L44)** **[M_PI_4_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L99)**            | `0.78539816339744830961` (Aka: `M_PI / 4`)       |
+| **[M_1_PI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L47)** **[M_1_PI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L102)**           | `0.31830988618379067153` (Aka: `1 / M_PI`)       |
+| **[M_2_PI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L50)** **[M_2_PI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L105)**           | `0.63661977236758134307` (Aka: `2 / M_PI`)       |
+| **[M_SQRT2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L53)** **[M_SQRT2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L108)**         | `1.41421356237309504880` (Aka: `sqrt(2)`)        |
+| **[M_SQRT1_2](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L56)** **[M_SQRT1_2_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L111)**     | `0.70710678118654752440` (Aka: `1 / sqrt(2)`)    |
+| **[M_SQRTPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L59)** **[M_SQRTPI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L114)**       | `1.77245385090551588191` (Aka: `sqrt(PI)`)       |
+| **[M_2_SQRTPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L62)** **[M_2_SQRTPI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L117)**   | `1.12837916709551257390` (Aka: `2 / sqrt(pi)`)   |
+| **[M_INVSQRTPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L65)** **[M_INVSQRTPI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L120)** | `0.56418958354775627928` (Aka: `invsqrt(pi)`)    |
+| **[M_TPI](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L68)** **[M_TPI_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L123)**             | `0.63661977236758138243` (Aka: `2 / PI`)         |
+
+# Trigonometric Constants:
+| Define Name                                                                                                                                                       | Value             |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| **[M_0DEG](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L129)** **[M_0DEG_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L151)**     | `0`               |
+| **[M_1DEG](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L132)** **[M_1DEG_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L154)**     | `0.0174532925199` |
+| **[M_45DEG](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L135)** **[M_45DEG_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L157)**   | `π / 4`           |
+| **[M_90DEG](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L138)** **[M_90DEG_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L160)**   | `π / 2`           |
+| **[M_180DEG](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L141)** **[M_180DEG_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L163)** | `π`               |
+| **[M_270DEG](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L144)** **[M_270DEG_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L166)** | `π * 2 / 3`       |
+| **[M_360DEG](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L147)** **[M_360DEG_F](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L169)** | `π * 2`           |
 
 # <float.h> Constants:
-| Define Name                                                                        | Value                           |
-| ---------------------------------------------------------------------------------- | ------------------------------- |
-| **[FLT_MAX](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L69)**      | `3.40282347E+38F`               |
-| **[FLT_MIN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L72)**      | `1.17549435E-38F`               |
-| **[FLT_EPSILON](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L75)**  | `1.19209290E-7F`                |
-| **[DBL_MAX](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L80)**      | `1.7976931348623158E+308`       |
-| **[DBL_MIN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L83)**      | `2.2250738585072014E-308`       |
-| **[DBL_EPSILON](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L86)**  | `2.2204460492503131E-16`        |
-| **[LDBL_MAX](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L91)**     | `1.18973149535723176502E+4932L` |
-| **[LDBL_MIN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L94)**     | `3.36210314311209350626E-4932L` |
-| **[LDBL_EPSILON](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L97)** | `1.08420217248550443401E-19L`   |
+| Define Name                                                                         | Value                           |
+| ----------------------------------------------------------------------------------- | ------------------------------- |
+| **[FLT_MAX](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L176)**      | `3.40282347E+38F`               |
+| **[FLT_MIN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L179)**      | `1.17549435E-38F`               |
+| **[FLT_EPSILON](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L182)**  | `1.19209290E-7F`                |
+| **[DBL_MAX](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L187)**      | `1.7976931348623158E+308`       |
+| **[DBL_MIN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L190)**      | `2.2250738585072014E-308`       |
+| **[DBL_EPSILON](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L193)**  | `2.2204460492503131E-16`        |
+| **[LDBL_MAX](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L198)**     | `1.18973149535723176502E+4932L` |
+| **[LDBL_MIN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L201)**     | `3.36210314311209350626E-4932L` |
+| **[LDBL_EPSILON](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L204)** | `1.08420217248550443401E-19L`   |
 
 # Environments for **[ft_fpclassify](https://github.com/TeomanDeniz/ft_math/blob/main/Floating-point_Classification/ft_fpclassify.c)** function:
 | Define Name                                                                         | Value |
 | ----------------------------------------------------------------------------------- | ----- |
-| **[FP_NAN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L102)**       |  `0`  |
-| **[FP_INFINITE](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L105)**  |  `1`  |
-| **[FP_ZERO](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L108)**      |  `2`  |
-| **[FP_SUBNORMAL](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L111)** |  `3`  |
-| **[FP_NORMAL](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L114)**    |  `4`  |
+| **[FP_NAN](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L210)**       |  `0`  |
+| **[FP_INFINITE](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L213)**  |  `1`  |
+| **[FP_ZERO](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L216)**      |  `2`  |
+| **[FP_SUBNORMAL](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L219)** |  `3`  |
+| **[FP_NORMAL](https://github.com/TeomanDeniz/ft_math/blob/main/ft_math.h#L222)**    |  `4`  |
 
 # A Few Example(s):
 ```c

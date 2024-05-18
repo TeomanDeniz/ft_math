@@ -3,28 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_erfc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 19:50:19 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/06 19:55:21 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_fabs(double);
+# double ft_exp(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_erfc(register double x)
 {
-	register double	result;
+	double			result;
 	register double	x_abs;
 	register double	y;
 
 	if (x == 0.0)
 		return (1.0);
 	if (ft_isnan(x))
-		return (x);
+	{
+		result = x;
+		return (result);
+	}
 	if (ft_isinf(x) == 1)
 		return (0.0);
 	if (ft_isinf(x) == -1)

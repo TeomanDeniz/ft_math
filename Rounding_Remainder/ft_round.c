@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_round.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 14:37:55 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/02 14:37:56 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_modf(double, double *);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_round(register double x)
@@ -21,7 +25,10 @@ double
 	register double	fracpart;
 
 	if (ft_isnan(x) || ft_isinf(x) || x == 0.0)
-		return (x);
+	{
+		intpart = x;
+		return (intpart);
+	}
 	fracpart = ft_modf(x, &intpart);
 	if (x > 0.0)
 	{
@@ -31,5 +38,5 @@ double
 	}
 	if (fracpart <= -0.5)
 		return (intpart - 1.0);
-	return (intpart);
+	return (0.0);
 }

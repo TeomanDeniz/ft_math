@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sincos.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 00:24:21 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/12 00:24:23 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_sin(double);
+# double ft_cos(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 void
 	ft_sincos(register double x, double *sine, double *cosine)

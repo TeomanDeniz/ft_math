@@ -3,23 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_asin.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:35:15 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/02/26 17:35:16 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+# double ft_atan2(double, double);
+# double ft_sqrt(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* Thanks to "https://github.com/sleepy-monax" for noticing me about
+/*
+ * Thanks to "https://github.com/sleepy-monax" for noticing me about
  * functon names are not same with in order.
  */
 
 double
-	ft_asin(register double x)
+	ft_asin(double x)
 {
 	if (ft_isnan(x))
 		return (x);

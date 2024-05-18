@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_softmedian.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 15:41:41 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 01:24:44 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_exp(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_softmedian(double *x, register int size, register double alpha)

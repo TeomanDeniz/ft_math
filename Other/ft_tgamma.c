@@ -3,45 +3,53 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tgamma.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 17:21:31 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:50:32 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define M_PIX2
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+# double ft_sqrt(double);
+# double ft_exp(double);
+# double ft_pow(double, double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline void	settings_filler(double *setting);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ void	settings_filler(double *setting);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_tgamma(register double x)
 {
 	double			setting[20];
 	register int	counter;
-	register double	result;
+	double			result;
 
-	if (ft_isinf(x) == -1 || (x - (long long)x == 0.0))
+	if (ft_isinf(x) == -1 || ((double)((double)x - (long)x) == 0.0))
 		return (-(0.0 / 0.0));
 	if (ft_isinf(x) || ft_isnan(x))
 		return (x);
 	counter = 0;
-	setting[0] = ft_sqrt(2.0 * M_PI);
+	setting[0] = ft_sqrt(M_PIX2);
 	settings_filler(setting);
 	result = setting[0];
 	while (++counter, counter < 20)
 		result += setting[counter] / (x + counter);
 	result *= ft_exp(-(x + 20.0)) * ft_pow(x + 20.0, x + 0.5);
 	if (ft_isnan(result / x))
-		return (0.0 * (((long long)x % 2 == 0) * -1.0));
-	return (result / x);
+		return (0.0 * (((long)x % 2L == 0L) * -1.0));
+	result /= x;
+	return (result);
 }
 
-static inline void
+extern __inline__ void
 	settings_filler(double *setting)
 {
 	register double	factoriel;

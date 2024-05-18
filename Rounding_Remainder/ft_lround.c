@@ -3,19 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lround.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 14:37:55 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 22:23:56 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_round(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-long int
+long
 	ft_lround(register double x)
 {
-	return ((long int)ft_round(x));
+	return ((long)ft_round(x));
 }

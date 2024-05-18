@@ -3,19 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nextafter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:58:04 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 22:14:06 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define DBL_MAX
+# define DBL_MIN
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_copysign(double, double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
-	ft_nextafter(register double x, register double y)
+	ft_nextafter(double x, double y)
 {
 	if (ft_isnan(x) || ft_isnan(y))
 		return (x + y);

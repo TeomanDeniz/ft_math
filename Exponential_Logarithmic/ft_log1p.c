@@ -3,30 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_log1p.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 14:26:58 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/02/25 14:26:59 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_log(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_log1p(register double x)
 {
+	double			result;
 	register double	y;
 
 	if (ft_isnan(x) || ft_isinf(x))
-		return (x);
+	{
+		result = x;
+		return (result);
+	}
 	if (x == -1.0)
 		return (-1.0 / 0.0);
 	if (x < -1.0)
 		return (-0.0 / 0.0);
 	if (x < 1E-15)
-		return (x - 0.5 * x * x);
+	{
+		result = x - 0.5 * x * x;
+		return (result);
+	}
 	y = 1.0 + x;
-	return (ft_log(y) - ((y - 1.0) - x) / y);
+	result = ft_log(y) - ((y - 1.0) - x) / y;
+	return (result);
 }

@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tanpi.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:52:47 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/12 18:54:06 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define M_PI
+# double ft_tan(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_tanpi(register double x)

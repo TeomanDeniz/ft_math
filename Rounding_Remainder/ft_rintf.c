@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rintf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 00:26:30 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/29 00:27:12 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#  float ft_floorf(float);
+#  float ft_ceilf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_rintf(register float x)
@@ -21,5 +24,5 @@ float
 		return (ft_floorf(x + 0.5F));
 	if (x < 0.0F)
 		return (ft_ceilf(x - 0.5F));
-	return (x);
+	return (0.0F);
 }

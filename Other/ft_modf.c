@@ -3,19 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_modf.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 19:12:33 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/02 14:11:35 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
-	ft_modf(register double x, double *integer)
+	ft_modf(double x, double *integer)
 {
 	if (ft_isnan(x) || ft_isinf(x))
 	{

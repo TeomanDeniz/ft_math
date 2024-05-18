@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atan.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:59:43 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 17:58:44 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define M_PI
+#    int ft_isnan(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_atan(register double x)

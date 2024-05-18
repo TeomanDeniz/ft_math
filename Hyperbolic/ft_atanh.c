@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atanh.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 16:07:37 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/01 16:07:38 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_fabs(double);
+# double ft_log(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_atanh(register double x)

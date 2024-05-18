@@ -3,26 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:03:31 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/02/26 15:35:56 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline double	sqrt_checker(register double x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ double	sqrt_checker(double x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_sqrt(register double x)
 {
-	register double	guess;
 	register double	last_guess;
+	double			guess;
 
 	if (x <= 0.0 || ft_isnan(x) || ft_isinf(x))
 		return (sqrt_checker(x));
@@ -36,8 +39,8 @@ double
 	return (guess);
 }
 
-static inline double
-	sqrt_checker(register double x)
+extern __inline__ double
+	sqrt_checker(double x)
 {
 	if (x < 0.0)
 		return (0.0 / 0.0);

@@ -3,21 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_elu.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:55:12 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 00:58:17 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_exp(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
-	ft_elu(register double x, register double alpha)
+	ft_elu(register double x, double alpha)
 {
 	if (x > 0.0)
-		return (x);
-	return (alpha * (ft_exp(x) - 1.0));
+	{
+		alpha = x;
+		return (alpha);
+	}
+	alpha *= (ft_exp(x) - 1.0);
+	return (alpha);
 }

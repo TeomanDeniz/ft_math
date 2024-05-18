@@ -3,21 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_jnf.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 22:20:11 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 03:28:12 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_fabsf(float);
+#  float ft_pow(float, float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline float	check_your_six(register float x);
-static inline float	factorial(register int n);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ float	check_your_six(float x);
+extern __inline__ float	factorial(int n);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 float
 	ft_jnf(register int n, register float x)
@@ -26,7 +31,7 @@ float
 	register float	numerator;
 	register int	counter;
 	register float	sign;
-	register float	sum;
+	float			sum;
 
 	if (ft_isnan(x) || ft_isinf(x) || x == 0.0F)
 		return (check_your_six(x));
@@ -38,7 +43,7 @@ float
 	counter = -1;
 	numerator = 1.0F;
 	denominator = 1.0F;
-	while (++counter, ft_fabsf(numerator / denominator) > 1E-15)
+	while (++counter, ft_fabsf(numerator / denominator) > 1E-15F)
 	{
 		numerator = ft_powf(-1.0F, counter) * \
 			ft_powf(x / 2.0F, n + 2.0F * counter);
@@ -48,16 +53,16 @@ float
 	return (sum * sign);
 }
 
-static inline float
-	factorial(register int n)
+extern __inline__ float
+	factorial(int n)
 {
 	if (n <= 0)
 		return (1.0F);
 	return ((float)n * factorial(n - 1));
 }
 
-static inline float
-	check_your_six(register float x)
+extern __inline__ float
+	check_your_six(float x)
 {
 	if (x == 0.0F)
 		return (1.0F);

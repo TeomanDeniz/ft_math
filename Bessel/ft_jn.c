@@ -3,21 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_jn.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 22:20:11 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 02:08:12 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_fabs(double);
+# double ft_pow(double, double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline double	check_your_six(register double x);
-static inline double	factorial(register int n);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ double	check_your_six(double x);
+extern __inline__ double	factorial(int n);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_jn(register int n, register double x)
@@ -26,7 +31,7 @@ double
 	register double	numerator;
 	register int	counter;
 	register double	sign;
-	register double	sum;
+	double			sum;
 
 	if (ft_isnan(x) || ft_isinf(x) || x == 0.0)
 		return (check_your_six(x));
@@ -47,16 +52,16 @@ double
 	return (sum * sign);
 }
 
-static inline double
-	factorial(register int n)
+extern __inline__ double
+	factorial(int n)
 {
 	if (n <= 0)
 		return (1.0);
 	return ((double)n * factorial(n - 1));
 }
 
-static inline double
-	check_your_six(register double x)
+extern __inline__ double
+	check_your_six(double x)
 {
 	if (x == 0.0)
 		return (1.0);

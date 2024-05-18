@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_acos.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:18:03 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 17:21:21 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_fabs(double);
+# double ft_atan2(double, double);
+# double ft_sqrt(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_acos(register double x)

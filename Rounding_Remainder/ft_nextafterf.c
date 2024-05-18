@@ -3,19 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nextafterf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:58:04 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 22:12:06 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define FLT_MAX
+# define FLT_MIN
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_copysignf(float, float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
-	ft_nextafterf(register float x, register float y)
+	ft_nextafterf(float x, float y)
 {
 	if (ft_isnan(x) || ft_isnan(y))
 		return (x + y);

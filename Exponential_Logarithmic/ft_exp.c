@@ -3,27 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:58:09 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 20:42:30 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline double	check_your_six(register double x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ double	check_your_six(double x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_exp(register double x)
 {
-	register double			result;
+	double					result;
 	register double			term;
 	register unsigned int	counter;
+	register double			x_x;
 
 	if (ft_isinf(x) || ft_isnan(x) || x == 0.0)
 		return (check_your_six(x));
@@ -32,7 +36,8 @@ double
 	counter = 0;
 	result = 1.0;
 	term = 1.0;
-	while (++counter, x / counter > (x / (x * x + 42.0)))
+	x_x = x * x + 42.0;
+	while (++counter, x / counter > (x / x_x))
 	{
 		term *= x / counter;
 		result += term;
@@ -40,8 +45,8 @@ double
 	return (result);
 }
 
-static inline double
-	check_your_six(register double x)
+extern __inline__ double
+	check_your_six(double x)
 {
 	if (x == 0.0)
 		return (1.0);

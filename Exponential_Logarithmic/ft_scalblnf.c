@@ -3,19 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_scalblnf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:32:51 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:10:53 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#  float ft_ldexpf(float, int);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
-	ft_scalblnf(register float x, register long int exponent)
+	ft_scalblnf(register float x, register int exponent)
 {
-	return (ft_ldexpf(x, (int)exponent));
+	return (ft_ldexpf(x, exponent));
 }

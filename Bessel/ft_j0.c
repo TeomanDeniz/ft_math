@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_j0.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 19:20:11 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/09 22:30:12 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# double ft_jn(int, double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_j0(register double x)
@@ -20,9 +22,9 @@ double
 	return (ft_jn(0, x));
 }
 
-// My entire fucking time wasted when i find another way in ft_jn() function.
+// My entire fucking time wasted when I find a better way in ft_jn() function.
 
-/*static inline double
+/*extern __inline__ double
 	check_your_six(register double x)
 {
 	if (ft_isnan(x) || ft_isinf(x))

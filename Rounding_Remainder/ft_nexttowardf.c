@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nexttowardf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:59:28 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 22:15:29 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#  float ft_nextafterf(float, float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_nexttowardf(register float x, register long double y)

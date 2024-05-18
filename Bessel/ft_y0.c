@@ -3,20 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_y0.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:15:22 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 02:03:02 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define M_INVSQRTPI
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_j0(double);
+# double ft_log(double);
+# double ft_fabs(double);
+# double ft_sqrt(double);
+# double ft_sin(double);
+# double ft_cos(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline double	check_your_six(register double x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ double	check_your_six(double x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_y0(register double x)
@@ -46,8 +56,8 @@ double
 		ft_cos((ft_fabs(x) - 0.785398164))));
 }
 
-static inline double
-	check_your_six(register double x)
+extern __inline__ double
+	check_your_six(double x)
 {
 	if (x == 0.0)
 		return (-(1.0 / 0.0));

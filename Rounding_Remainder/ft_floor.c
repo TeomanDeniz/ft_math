@@ -3,19 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_floor.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 16:04:12 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 22:04:49 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
-	ft_floor(register double x)
+	ft_floor(double x)
 {
 	if (ft_isnan(x) || ft_isinf(x))
 		return (x);

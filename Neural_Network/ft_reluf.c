@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_reluf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:36:47 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 01:01:51 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#  float ft_fmaxf(float, float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_reluf(register float x)

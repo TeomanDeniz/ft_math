@@ -3,21 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_asinhf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 15:56:37 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 20:32:38 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+#  float ft_logf(float);
+#  float ft_sqrtf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_asinhf(register float x)
 {
+	float	result;
+
 	if (ft_isinf(x) || ft_isnan(x))
-		return (x);
-	return (ft_logf(x + ft_sqrtf(x * x + 1.0F)));
+	{
+		result = x;
+		return (result);
+	}
+	result = ft_logf(x + ft_sqrtf(x * x + 1.0F));
+	return (result);
 }

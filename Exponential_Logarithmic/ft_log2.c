@@ -3,16 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_log2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:08:32 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/01 18:08:34 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define M_LN2
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_log(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
 	ft_log2(register double x)

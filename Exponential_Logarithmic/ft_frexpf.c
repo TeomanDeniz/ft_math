@@ -3,19 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_frexpf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 20:39:47 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:06:49 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_fabsf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
-	ft_frexpf(register float x, int *exponent)
+	ft_frexpf(float x, int *exponent)
 {
 	register int	sign;
 	register int	epsilon;
@@ -38,5 +42,6 @@ float
 	while (--epsilon, x < 0.5F)
 		x *= 2.0F;
 	*exponent = sign * epsilon;
-	return (sign * x);
+	x *= (float)sign;
+	return (x);
 }

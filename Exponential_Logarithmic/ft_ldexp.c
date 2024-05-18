@@ -3,25 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ldexp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 13:29:41 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:05:42 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+# double ft_pow(double, double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
-	ft_ldexp(register double x, register int exponent)
+	ft_ldexp(double x, register long exponent)
 {
-	if (ft_isinf(x) || ft_isnan(x) || x == 0.0 || exponent == 0)
+	if (ft_isinf(x) || ft_isnan(x) || x == 0.0 || exponent == 0L)
 		return (x);
-	if (exponent == (signed)0X80000000 || exponent == 0X7FFFFFFF)
+	if (exponent == (signed)0X8000000000000000L || \
+		exponent == 0X7FFFFFFFFFFFFFFFL)
 		return (0.0);
-	if (exponent + ((x / 2) + 1) >= 1025)
+	if (exponent + ((x / 2L) + 1L) >= 1025L)
 		return (1.0);
 	return (x * ft_pow(2.0, exponent));
 }

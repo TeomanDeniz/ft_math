@@ -3,19 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fdim.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 00:51:30 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 00:52:33 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
-	ft_fdim(register double x, register double y)
+	ft_fdim(double x, double y)
 {
 	if (ft_isinf(x) == 1 || ft_isnan(x))
 		return (x);

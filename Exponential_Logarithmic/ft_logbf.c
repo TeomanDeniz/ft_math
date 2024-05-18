@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_logbf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 20:45:44 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:00:45 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_frexpf(float, int *);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_logbf(register float x)
@@ -26,5 +30,5 @@ float
 	if (ft_isinf(x))
 		return ((1.0F / 0.0F));
 	ft_frexpf(x, &exponent);
-	return ((float)exponent - 1);
+	return ((float)exponent - 1.0F);
 }

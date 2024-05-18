@@ -3,22 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_logf.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:35:52 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 03:36:38 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define M_LN2_F
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+#  float ft_fabsf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline float	check_your_six(register float x);
-static inline float	log2_simplifier(float *x);
-static inline float	two_or_bigger(float x, register float result);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ float	check_your_six(float x);
+extern __inline__ float	log2_simplifier(float *x);
+extern __inline__ float	two_or_bigger(float x, register float result);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 float
 	ft_logf(register float x)
@@ -27,7 +32,7 @@ float
 	register float	numerator;
 	register float	denominator;
 	register float	term;
-	register float	result;
+	float			result;
 
 	if (x < 0.0F || x == 0.0F || ft_isinf(x) || ft_isnan(x))
 		return (check_your_six(x));
@@ -45,22 +50,24 @@ float
 		denominator += 2.0F;
 		term = numerator / denominator;
 	}
-	return (2.0F * result);
+	result *= 2.0F;
+	return (result);
 }
 
-static inline float
+extern __inline__ float
 	log2_simplifier(float *x)
 {
-	register int	epsilon;
+	int	epsilon;
 
 	epsilon = -1;
 	while (++epsilon, *x >= 2.0F)
 		*x /= 2.0F;
-	return (epsilon * M_LN2_F);
+	epsilon *= M_LN2_F;
+	return (epsilon);
 }
 
-static inline float
-	two_or_bigger(float x, register float result)
+extern __inline__ float
+	two_or_bigger(float x, float result)
 {
 	register float	__log2__;
 	register float	calculator;
@@ -73,18 +80,19 @@ static inline float
 	calculator = (numerator) * (numerator);
 	term = numerator;
 	denominator = 1.0F;
-	while (ft_fabs(term) > 1E-15)
+	while (ft_fabsf(term) > 1E-15)
 	{
 		result += term;
 		numerator *= calculator;
 		denominator += 2.0F;
 		term = numerator / denominator;
 	}
-	return (2.0F * result + __log2__);
+	result = 2.0F * result + __log2__;
+	return (result);
 }
 
-static inline float
-	check_your_six(register float x)
+extern __inline__ float
+	check_your_six(float x)
 {
 	if (x < 0.0F)
 		return (0.0F / 0.0F);

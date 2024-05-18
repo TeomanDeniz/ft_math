@@ -1,14 +1,14 @@
-:: ************************************************************************** ..
-::                                                                            ..
-::                                                        :::      ::::::::   ..
-::   MAKE.bat                                           :+:      :+:    :+:   ..
-::                                                    +:+ +:+         +:+     ..
-::   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        ..
-::                                                +#+#+#+#+#+   +#+           ..
-::   Created: 2022/12/09 23:15:03 by hdeniz            #+#    #+#             ..
-::   Updated: 2023/03/23 03:11:49 by hdeniz           ###   ########.fr       ..
-::                                                                            ..
-:: ************************************************************************** ..
+:: ************************************************************************** ::
+::                                                                            ::
+::                                                        :::      ::::::::   ::
+::   MAKE.bat                                           :+:      :+:    :+:   ::
+::                                                    +:+ +:+         +:+     ::
+::   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        ::
+::                                                +#+#+#+#+#+   +#+           ::
+::   Created: 2022/12/09 23:15:03 by hdeniz            #+#    #+#             ::
+::   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       ::
+::                                                                            ::
+:: ************************************************************************** ::
 
 @ECHO OFF
 SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
@@ -31,7 +31,7 @@ REM [FILES TO COMPILE]
 SET "MAIN="
 REM [MAIN PRODUCT TO COMPILE]
 
-SET "CFLAGS=-Wall -Wextra -Werror"
+SET "CFLAGS=-Wall -Wextra -Werror -O3"
 REM [COMPILER FLAGS]
 
 GOTO :Makefile %*
@@ -119,10 +119,10 @@ GOTO :EOF
 	SET "MAKEFILE_PATH=%~0"
 	SET "#=UPDATE_LINE"
 	WHERE !CC!>NUL 2>NUL
-	IF %ERRORLEVEL% NEQ 0 GOTO :ERROR_COMPILER
+	IF !ERRORLEVEL! NEQ 0 GOTO :ERROR_COMPILER
 	FOR /F "DELIMS=#" %%# IN ('"PROMPT #$H# &ECHO ON &FOR %%# IN (1) DO REM"') DO (
-		SET "%#%=%%#"
-		SET "%#%=!%#%:~0,1!"
+		SET "!#!=%%#"
+		SET "!#!=!%#%:~0,1!"
 	)
 	SET "#="
 	SET "CLEAR_LINE= "
@@ -162,7 +162,7 @@ GOTO :ALL
 GOTO :EOF
 
 :PAUSE
-	FOR %%# IN (%CMDCMDLINE:"=%) DO (IF "%%~#"=="!MAKEFILE_PATH!" ECHO.&PAUSE)
+	FOR %%# IN (!CMDCMDLINE:"=!) DO (IF "%%~#"=="!MAKEFILE_PATH!" ECHO.&PAUSE)
 GOTO :EOF
 
 :ERROR_MAIN

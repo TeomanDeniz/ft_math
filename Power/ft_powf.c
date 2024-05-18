@@ -3,21 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_powf.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 16:38:18 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 21:20:54 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_expf(float);
+#  float ft_logf(float);
+#  float ft_floorf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline float	check_your_six(register float base, register float power);
-static inline float	base_is_minus(register float base, register float power);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ float	check_your_six(float base, float power);
+extern __inline__ float	base_is_minus(register float base, \
+register float power);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 float
 	ft_powf(register float base, register float power)
@@ -37,20 +44,20 @@ float
 	return (ft_expf(power * ft_logf(base)));
 }
 
-static inline float
+extern __inline__ float
 	base_is_minus(register float base, register float power)
 {
 	if (ft_floorf(power) == power)
 	{
 		if ((int)power % 2 == 0)
-			return (ft_pow(-base, power));
-		return (-ft_pow(-base, power));
+			return (ft_powf(-base, power));
+		return (-ft_powf(-base, power));
 	}
 	return (-(0.0F / 0.0F));
 }
 
-static inline float
-	check_your_six(register float base, register float power)
+extern __inline__ float
+	check_your_six(float base, float power)
 {
 	if (ft_isinf(power) == -1)
 		return (0.0F);

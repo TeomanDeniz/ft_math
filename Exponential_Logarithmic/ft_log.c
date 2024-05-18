@@ -3,22 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_log.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:35:52 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 20:55:38 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+# double ft_fabs(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline double	check_your_six(register double x);
-static inline double	log2_simplifier(double *x);
-static inline double	two_or_bigger(double x, register double result);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ double	check_your_six(double x);
+extern __inline__ double	log2_simplifier(double *x);
+extern __inline__ double	two_or_bigger(double x, double result);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_log(register double x)
@@ -27,7 +31,7 @@ double
 	register double	numerator;
 	register double	denominator;
 	register double	term;
-	register double	result;
+	double			result;
 
 	if (x < 0.0 || x == 0.0 || ft_isinf(x) || ft_isnan(x))
 		return (check_your_six(x));
@@ -45,11 +49,12 @@ double
 		denominator += 2.0;
 		term = numerator / denominator;
 	}
-	return (2.0 * result);
+	result *= 2.0;
+	return (result);
 }
 
-static inline double
-	two_or_bigger(double x, register double result)
+extern __inline__ double
+	two_or_bigger(double x, double result)
 {
 	register double	__log2__;
 	register double	calculator;
@@ -69,10 +74,11 @@ static inline double
 		denominator += 2.0;
 		term = numerator / denominator;
 	}
-	return (2.0 * result + __log2__);
+	result = 2.0 * result + __log2__;
+	return (result);
 }
 
-static inline double
+extern __inline__ double
 	log2_simplifier(double *x)
 {
 	register int	epsilon;
@@ -83,8 +89,8 @@ static inline double
 	return (epsilon * M_LN2);
 }
 
-static inline double
-	check_your_six(register double x)
+extern __inline__ double
+	check_your_six(double x)
 {
 	if (x < 0.0)
 		return (0.0 / 0.0);

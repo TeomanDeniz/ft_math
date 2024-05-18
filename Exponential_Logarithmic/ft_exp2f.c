@@ -3,23 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exp2f.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 16:18:27 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 20:45:28 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+#  float ft_expf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
+
+#define LOG2_F 0.69314718055994528623F
 
 float
 	ft_exp2f(register float x)
 {
-	if (ft_isinf(x) == 1 || ft_isnan(x))
-		return (x);
+	float	result;
+
+	if (ft_isinf(x) || ft_isnan(x) == 1)
+	{
+		result = x;
+		return (result);
+	}
 	if (ft_isinf(x))
 		return (0.0F);
-	return (ft_expf(x * ft_logf(2.0F)));
+	result = ft_expf(x * LOG2_F);
+	return (result);
 }

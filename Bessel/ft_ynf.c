@@ -3,30 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ynf.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 11:32:11 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 03:39:06 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isinf(double);
+#    int ft_isnan(double);
+#  float ft_fabsf(float);
+#  float ft_y0f(float);
+#  float ft_y1f(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline float	check_your_six(register int n, float x, int sign);
-static inline int		n_abs(register int n);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ float	check_your_six(register int n, float x, int sign);
+extern __inline__ int	n_abs(int n);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 float
 	ft_ynf(register int n, register float x)
 {
+	float			result;
 	register float	temp;
-	register float	a;
-	register float	b;
+	register float	y0_epsion;
 	register int	sign;
-	register int	i;
+	register int	counter;
 
 	sign = 1;
 	if (n < 0 && n % 2)
@@ -35,27 +41,28 @@ float
 	if (x == 0.0F || ft_isinf(x) || ft_isnan(x) || n == 0 || n == 1)
 		return (check_your_six(n, x, sign));
 	x = ft_fabsf(x);
-	a = ft_y0f(x);
-	b = ft_y1f(x);
-	i = 0;
-	while (++i, i < n)
+	y0_epsion = ft_y0f(x);
+	result = ft_y1f(x);
+	counter = 0;
+	while (++counter, counter < n)
 	{
-		temp = b;
-		b = (2.0F * i / x) * b - a;
-		a = temp;
+		temp = result;
+		result = (2.0F * counter / x) * result - y0_epsion;
+		y0_epsion = temp;
 	}
-	return (sign * b);
+	result *= sign;
+	return (result);
 }
 
-static inline int
-	n_abs(register int n)
+extern __inline__ int
+	n_abs(int n)
 {
 	if (n < 0)
 		return (-n);
 	return (n);
 }
 
-static inline float
+extern __inline__ float
 	check_your_six(register int n, float x, int sign)
 {
 	if (x == 0.0F)

@@ -3,19 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_remainder.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 15:29:31 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/02 15:29:32 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_round(double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 double
-	ft_remainder(register double x, register double y)
+	ft_remainder(double x, double y)
 {
 	register double	quotient;
 	register double	rounded_quotient;

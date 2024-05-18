@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_roundf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 14:37:55 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/19 22:05:56 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_modff(float, float *);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 float
 	ft_roundf(register float x)
@@ -31,5 +35,5 @@ float
 	}
 	if (fracpart <= -0.5F)
 		return (intpart - 1.0F);
-	return (intpart);
+	return (0.0F);
 }

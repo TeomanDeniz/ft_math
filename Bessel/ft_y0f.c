@@ -3,20 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_y0f.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:15:22 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 02:10:02 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+# define M_INVSQRTPI_F
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+#  float ft_j0f(float);
+#  float ft_logf(float);
+#  float ft_fabsf(float);
+#  float ft_sqrtf(float);
+#  float ft_sinf(float);
+#  float ft_cosf(float);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline float	check_your_six(register float x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ float	check_your_six(float x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 float
 	ft_y0f(register float x)
@@ -46,8 +56,8 @@ float
 		ft_cosf((ft_fabsf(x) - 0.785398164F))));
 }
 
-static inline float
-	check_your_six(register float x)
+extern __inline__ float
+	check_your_six(float x)
 {
 	if (x == 0.0F)
 		return (-(1.0F / 0.0F));

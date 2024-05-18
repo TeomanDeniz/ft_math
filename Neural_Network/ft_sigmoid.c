@@ -3,31 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sigmoid.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdeniz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 21:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2023/03/20 01:03:46 by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* INCLUDES */
-#include "../ft_math.h"
-/* INCLUDES */
+/* **************************** [v] INCLUDES [v] **************************** */
+#include "../ft_math.h" /*
+#    int ft_isnan(double);
+#    int ft_isinf(double);
+# double ft_pow(double, double);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
-/* PROTOTYPES */
-static inline double	check_your_six(register double x);
-/* PROTOTYPES */
+/* *************************** [v] PROTOTYPES [v] *************************** */
+extern __inline__ double	check_your_six(double x);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 double
 	ft_sigmoid(register double x)
 {
+	double	result;
+
 	if (ft_isnan(x) || ft_isinf(x))
 		return (check_your_six(x));
-	return (1.0 / (1.0 + ft_pow(M_E, -x)));
+	result = 1.0 / (1.0 + ft_pow(M_E, -x));
+	return (result);
 }
 
-static inline double
-	check_your_six(register double x)
+extern __inline__ double
+	check_your_six(double x)
 {
 	if (ft_isnan(x))
 		return (x);
