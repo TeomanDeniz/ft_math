@@ -40,7 +40,7 @@ Here's the arguments `MAKE.bat` and `Makefile` using:
 Then, in console: you need to include your binary compiler library (.a file) via parameter while compiling your file.
 
 ```
-GCC main.c ft_math.a
+GCC main.c mathft.a
 ```
 
 # Trigonometric functions:
