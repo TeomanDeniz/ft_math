@@ -226,7 +226,8 @@
 union u_double_bits
 {
 	double	value;
-	struct s_double_type {
+	struct s_double_type
+	{
 		unsigned long long	fraction : 52;
 		unsigned short		exponent : 11;
 		unsigned char		sign : 1;
@@ -236,7 +237,8 @@ union u_double_bits
 union u_float_bits
 {
 	float	value;
-	struct s_float_type {
+	struct s_float_type
+	{
 		unsigned long long	fraction : 23;
 		unsigned short		exponent : 8;
 		unsigned char		sign : 1;
