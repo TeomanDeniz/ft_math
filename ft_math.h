@@ -6,7 +6,7 @@
 /*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
+/*   Updated: 2024/06/02 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -298,7 +298,7 @@ extern double	ft_exp2(register double x);
 extern double	ft_expm1(register double x);
 extern double	ft_exp10(register double x);
 extern double	ft_frexp(double x, long *exponent);
-extern double	ft_ldexp(double x, register int exponent);
+extern double	ft_ldexp(double x, register long exponent);
 extern double	ft_log(register double x);
 extern double	ft_log2(register double x);
 extern double	ft_log10(register double x);
