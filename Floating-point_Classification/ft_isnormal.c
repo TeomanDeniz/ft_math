@@ -6,7 +6,7 @@
 /*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 20:23:31 by hdeniz            #+#    #+#             */
-/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
+/*   Updated: 2025/01/27 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int
 {
 	int	result;
 
-	result = ft_isfinite(x) && x != 0.0 && ft_fabs(x) >= DBL_MIN;
+	result = (ft_isfinite(x) && x != 0.0 && ft_fabs(x) >= DBL_MIN);
 	return (result);
 }

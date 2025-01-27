@@ -17,21 +17,30 @@
 #        */
 /* **************************** [^] INCLUDES [^] **************************** */
 
+/* ***************************** [v] UNIONS [v] ***************************** */
+union u_static_cast
+{
+	double	as_double;
+	long	as_long;
+};
+/* ***************************** [^] UNIONS [^] ***************************** */
+
 double
 	ft_invsqrt(register double x)
 {
-	double	demon;
-	long	wtf;
+	union u_static_cast	demon;
+	union u_static_cast	wtf;
 
 	if (ft_isinf(x) || ft_isnan(x))
 		return (x);
 	if (x == 0.0)
 		return (-(0.0 / 0.0));
-	demon = x;
-	wtf = *(long *)&demon;
-	wtf = 0X5FE6EB50C7B537A9L - (wtf >> 1);
-	demon = *(double *)&wtf;
-	return (demon * (1.5 - 0.5 * x * demon * demon));
+	demon.as_double = x;
+	wtf.as_long = demon.as_long;
+	wtf.as_long = 0X5FE6EB50C7B537A9L - (wtf.as_long >> 1);
+	demon.as_double = wtf.as_double;
+	return (demon.as_double * \
+		(1.5 - 0.5 * x * demon.as_double * demon.as_double));
 }
 
 /*

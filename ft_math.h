@@ -6,7 +6,7 @@
 /*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:17:45 by hdeniz            #+#    #+#             */
-/*   Updated: 2024/06/02 ??:??:?? by hdeniz           ###   ########.fr       */
+/*   Updated: 2025/01/27 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -222,7 +222,7 @@
 #  define FP_NORMAL       4
 # endif
 /* ******** [^] ENVIRONMENTS THAT USED IN ft_fpclassify FUNCTION [^] ******** */
-/* **************************** [v] STRUCTS [v] ***************************** */
+/* ***************************** [v] UNIONS [v] ***************************** */
 union u_double_bits
 {
 	double	value;
@@ -232,7 +232,8 @@ union u_double_bits
 		unsigned short		exponent : 11;
 		unsigned char		sign : 1;
 	}	parts;
-}; // USED IN ./Floating-point_Classification/ft_significand.c
+};
+// USED IN ./Floating-point_Classification/ft_significand.c
 /* [v] FLOAT ---------------------------------------------------------------- */
 union u_float_bits
 {
@@ -243,9 +244,10 @@ union u_float_bits
 		unsigned short		exponent : 8;
 		unsigned char		sign : 1;
 	}	parts;
-}; // USED IN ./Floating-point_Classification/ft_significandf.c
+};
+// USED IN ./Floating-point_Classification/ft_significandf.c
 /* [^] FLOAT ---------------------------------------------------------------- */
-/* **************************** [^] STRUCTS [^] ***************************** */
+/* ***************************** [^] UNIONS [^] ***************************** */
 /* ************************ [v] ./Trigonometric [v] ************************* */
 extern double	ft_sin(register double x);
 extern double	ft_cos(register double x);
@@ -265,7 +267,7 @@ extern double	ft_tanpi(register double x);
 extern float	ft_sinf(register float x);
 extern float	ft_cosf(register float x);
 extern float	ft_tanf(register float x);
-extern float	ft_asinf(register float x);
+extern float	ft_asinf(float x);
 extern float	ft_acosf(register float x);
 extern float	ft_atanf(register float x);
 extern float	ft_atan2f(register float y, register float x);

@@ -6,7 +6,7 @@
 /*   By: hdeniz <Discord:@teomandeniz>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 11:38:23 by hdeniz            #+#    #+#             */
-/*   Updated: 2024/05/18 ??:??:?? by hdeniz           ###   ########.fr       */
+/*   Updated: 2025/01/27 ??:??:?? by hdeniz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,30 @@
 #define S6 1.58969099521155010221E-10F
 /* ************************* [^] MAGIC NUMBERS [^] ************************** */
 
-float
-	ft_sinf(float x)
+/* ***************************** [v] UNIONS [v] ***************************** */
+union u_static_cast
 {
-	float			result;
-	register float	x_x;
-	register float	x_x_x;
-	register float	magic;
-	register int	floating_point_bits;
+	float	as_float;
+	int		as_int;
+};
+/* ***************************** [^] UNIONS [^] ***************************** */
+
+float
+	ft_sinf(register float x)
+{
+	register float		x_x;
+	register float		x_x_x;
+	union u_static_cast	cast;
 
 	if (((x) - ((int)(x / 3.141592F)) * (3.141592F)) != \
 		((x) - ((int)(x / 6.283184F)) * (6.283184F)))
 		x *= -1.0F;
 	x = ((x) - ((int)(x / 3.141592F)) * (3.141592F));
-	floating_point_bits = *(int *)&x & 0X7FFFFFFF;
-	if (floating_point_bits < 0X3E400000)
-		if ((int)x == 0)
-			return (x);
+	cast.as_float = x;
+	if ((cast.as_int & 0X7FFFFFFF) < 0X3E400000 && (int)x == 0)
+		return (x);
 	x_x = x * x;
 	x_x_x = x_x * x;
-	magic = S2 + x_x * (S3 + x_x * (S4 + x_x * (S5 + x_x * S6)));
-	result = x - ((x_x * (-x_x_x * magic)) - x_x_x * S1);
-	return (result);
+	return (x - ((x_x * (-x_x_x * (S2 + x_x * (S3 + x_x * (S4 + x_x * \
+		(S5 + x_x * S6)))))) - x_x_x * S1));
 }
